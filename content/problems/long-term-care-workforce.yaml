@@ -1,0 +1,41 @@
+id: long-term-care-workforce
+title: Not enough care workers for ageing populations
+oneLine: "Japan expects to need about 2.72 million care workers by FY2040, up from 2.15 million in FY2022, and Germany projects a nursing gap of 280,000 to 690,000 by 2049."
+who:
+  text: "Older people who need daily help, the families who cover the gaps, and the providers (care homes, home-visit services) who cannot fill shifts. Most acute in fast-ageing economies such as Japan and Germany, which now recruit abroad to cover it."
+evidence:
+  - claim: "Japan's health ministry, aggregating prefectures' 9th-period long-term care plans, estimates the country needs about 2.4 million care workers in FY2026 and about 2.72 million in FY2040, against 2.15 million in FY2022."
+    source: { title: "第9期介護保険事業計画に基づく介護職員の必要数について", publisher: "Ministry of Health, Labour and Welfare (Japan)", url: "https://www.mhlw.go.jp/stf/newpage_41379.html", asOf: "2024-07-12" }
+  - claim: "Germany's statistics office projects demand for nursing staff (Pflegekräfte) rising from 1.62 million in 2019 to 2.15 million in 2049, leaving a gap of 280,000 in its trend scenario and 690,000 in its status-quo scenario by 2049."
+    source: { title: "Bis 2049 werden voraussichtlich mindestens 280 000 zusätzliche Pflegekräfte benötigt (Pressemitteilung Nr. 033)", publisher: "Statistisches Bundesamt (Destatis)", url: "https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/01/PD24_033_23_12.html", asOf: "2024-01-24" }
+  - claim: "Germany's Triple Win programme (GIZ with the Federal Employment Agency) has placed more than 8,000 nursing professionals and trainees with German employers since 2013, recruiting from Kerala, Telangana, Indonesia, the Philippines and Tunisia."
+    source: { title: "Fachkräfte: von Kerala nach Wolfratshausen", publisher: "GIZ", url: "https://www.giz.de/de/newsroom/storys/fachkraefte-von-kerala-nach-wolfratshausen", asOf: "2025-09-01" }
+archetypes: [aging]
+countries: [JPN, DEU]
+supply:
+  - { name: "Specified Skilled Worker (Kaigo) programme", kind: government, what: "Japan's residence status for foreign care workers, with skills and Japanese tests, an employer council, and (since April 2025) limited home-visit work.", url: "https://www.mhlw.go.jp/stf/newpage_000117702.html" }
+  - { name: "Triple Win (GIZ and Bundesagentur für Arbeit)", kind: government, what: "Recruits, trains in German and places foreign nurses with German hospitals and care employers.", url: "https://www.giz.de/de/newsroom/storys/fachkraefte-von-kerala-nach-wolfratshausen" }
+payers:
+  - { who: "Public long-term care insurance (Japan's kaigo hoken, Germany's Pflegeversicherung)", type: insurer, why: "They fund most formal care hours, so anything that raises hours delivered per worker or cuts turnover is directly their cost line." }
+  - { who: "Care home and home-care operators", type: employer, why: "Unfilled shifts mean refused clients and agency premiums; they already pay recruiters and scheduling software." }
+  - { who: "Prefectures and national labour/health ministries", type: state, why: "They carry the workforce targets and fund recruitment, training subsidies and foreign-worker programmes." }
+  - { who: "Families buying private care hours", type: user, why: "When formal care is short they pay out of pocket or lose paid work to cover it." }
+graveyard:
+  - { name: "HomeHero (US)", what: "Online marketplace matching families with in-home senior caregivers; raised $23 million and ceased home-care operations in February 2017.", blocker: regulation, lesson: "Overtime and minimum-wage rules forced a switch from contractors to W-2 employees, onboarding costs jumped, hospital pilots never became contracts, and private pay alone could not carry it. A care-staffing marketplace inherits the employer's labour-law burden.", url: "https://homehealthcarenews.com/2017/02/homehero-ceases-operations-exits-home-care/" }
+blockers: [payer, regulation, unit-economics, trust]
+lenses:
+  profit: { score: 3, why: "Operators and insurers do pay for staffing and scheduling tools, but margins in care are thin and the market is national, regulated and slow to buy." }
+  meaning: { score: 4, why: "You work with care workers and the people they look after; feedback on whether a shift got easier is immediate." }
+  purpose: { score: 4, why: "The gap compounds every year; anything that keeps a trained worker in the job keeps several older people cared for." }
+skills: [software, operations, languages, policy]
+timeToFirstValue: months
+capital: medium
+crowding: { level: some, note: "Governments run the big recruitment pipelines; private scheduling and care-management software exists, but tools for retention and for onboarding foreign workers in their own language are thin." }
+buildAngles:
+  - "Bilingual onboarding and on-shift reference for foreign care workers in Japan (Japanese care vocabulary with Indonesian, Vietnamese, Tagalog or Nepali), tied to the kaigo skills and Japanese tests."
+  - "Paperwork reduction for care-record keeping (voice notes to structured records) so each worker spends more of a shift on care, sold to operators."
+  - "A retention early-warning tool for operators: shift patterns, overtime and sick days that predict who is about to quit."
+firstConversations:
+  - "Registered support organisations (登録支援機関) and the nursing-care Specified Skilled Worker council that every Japanese employer must join."
+  - "Care-home managers in a German Pflegeheim association such as bpa (Bundesverband privater Anbieter sozialer Dienste) or a Caritas/Diakonie regional office."
+  - "Foreign care workers themselves: Filipino and Indonesian community groups in Tokyo/Osaka, and Kerala nurse networks recruited through Triple Win."

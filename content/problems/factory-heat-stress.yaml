@@ -1,0 +1,47 @@
+id: factory-heat-stress
+title: Heat stress in factories and outdoor work
+oneLine: "Most of the world's workers are exposed to excessive heat at work; in garment hubs it costs health, income and export earnings, and the cooling fixes can pay for themselves."
+who:
+  text: "Garment, factory and outdoor workers in hot manufacturing hubs (Bangladesh, Cambodia, Pakistan, Vietnam, India), especially in ironing, finishing and cutting areas, plus the factory owners losing output."
+  population:
+    value: 2400000000
+    label: workers likely exposed to excessive heat at some point during work (more than)
+    source: { title: "Climate change creates a 'cocktail' of serious health hazards for 70 per cent of the world's workers", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/climate-change-creates-%E2%80%98cocktail%E2%80%99-serious-health-hazards-70-cent-world%E2%80%99s", asOf: "2020" }
+evidence:
+  - claim: "More than 2.4 billion workers, out of a global workforce of 3.4 billion, are likely to be exposed to excessive heat during their work (2020 figures); excessive heat is attributed to 22.87 million occupational injuries and 18,970 deaths each year."
+    source: { title: "Climate change creates a 'cocktail' of serious health hazards for 70 per cent of the world's workers", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/climate-change-creates-%E2%80%98cocktail%E2%80%99-serious-health-hazards-70-cent-world%E2%80%99s", asOf: "2024-04-22" }
+  - claim: "The ILO projects that in 2030, 2.2 per cent of total working hours worldwide will be lost to higher temperatures, a loss equivalent to 80 million full-time jobs; Southern Asia is projected to lose about 5 per cent of working hours."
+    source: { title: "Increase in heat stress predicted to bring productivity loss equivalent to 80 million jobs", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/increase-heat-stress-predicted-bring-productivity-loss-equivalent-80", asOf: "2019-07-01" }
+  - claim: "Four apparel hubs (Bangladesh, Cambodia, Pakistan, Vietnam), which together make 18% of global apparel exports, risk losing $65 billion in export earnings and 1 million potential jobs by 2030 to extreme heat and flooding."
+    source: { title: "Higher Ground? Fashion's climate breakdown", publisher: "Cornell ILR Global Labor Institute", url: "https://www.ilr.cornell.edu/global-labor-institute/higher-ground-fashions-climate-breakdown", asOf: "2023-09" }
+  - claim: "A year-long study of eight Dhaka-region apparel factories found a seven-month heat stress season, one factory losing an estimated 4.1 percent of annual revenue to high heat stress, and cooling investments with an average payback period of one to four years."
+    source: { title: "Six Seasons, Four Summers: How to Solve Fashion's High Heat Problem", publisher: "Cornell ILR Global Labor Institute", url: "https://www.ilr.cornell.edu/global-labor-institute/report-summary/six-seasons-four-summers-how-solve-fashions-high-heat-problem", asOf: "2026-09" }
+archetypes: [manufacturing]
+countries: [BGD, KHM, PAK, VNM, IND]
+supply:
+  - { name: "Better Work (ILO and IFC)", kind: multilateral, what: "Factory working-conditions programme in garment and footwear, including occupational safety and health, with country programmes in Bangladesh, Cambodia, Viet Nam and others.", url: "https://betterwork.org/" }
+  - { name: "Cornell Global Labor Institute", kind: research, what: "Measures heat in apparel factories and models the cost and payback of cooling, with BRAC University and Bangladeshi worker groups.", url: "https://www.ilr.cornell.edu/global-labor-institute/report-summary/six-seasons-four-summers-how-solve-fashions-high-heat-problem" }
+  - { name: "SEWA parametric heat insurance", kind: ngo, what: "Automatic daily payouts to informal women workers when temperatures pass a threshold, under randomised evaluation.", url: "https://www.povertyactionlab.org/initiative-project/insuring-against-extreme-heat-randomised-evaluation" }
+payers:
+  - { who: "Global apparel brands and retailers", type: buyer, why: "Their supplier codes cover worker safety, and lost output and delayed orders hit their supply chain; adaptation cost-sharing is now on the table." }
+  - { who: "Factory owners", type: employer, why: "Heat cuts output and revenue; a cooling retrofit with a one-to-four-year payback is a capex decision they can make." }
+  - { who: "Development finance and climate-adaptation funds", type: donor, why: "Worker heat adaptation is fundable adaptation finance, and lenders can tie loans to retrofits." }
+  - { who: "Labour ministries and inspectorates", type: state, why: "Heat thresholds are entering OSH rules; they need measurement to enforce them." }
+graveyardNote: "No documented shut-down or failed ventures found in searches for heat-stress apps, wearables or cooling programmes for garment and factory workers in Bangladesh, Cambodia, Vietnam and India."
+blockers: [payer, data, unit-economics]
+lenses:
+  profit: { score: 3, why: "Factories and brands can pay if the tool links heat to lost output in money; buyer-driven compliance creates a channel." }
+  meaning: { score: 4, why: "Work happens on factory floors with workers and supervisors, and a cooler line is felt the same day." }
+  purpose: { score: 5, why: "Billions of exposed workers and thousands of deaths a year, rising every summer." }
+skills: [hardware, data, operations, health]
+timeToFirstValue: months
+capital: medium
+crowding: { level: sparse, note: "Research groups and ILO/IFC programmes are measuring; very few products turn heat data into a factory's business case or a worker-facing alert." }
+buildAngles:
+  - "Low-cost WBGT sensor kit plus dashboard that converts heat readings by floor zone into estimated lost minutes and money, so an owner can price a retrofit."
+  - "A brand-facing heat-risk module for supplier audits: which supplier floors cross thresholds, and for how many hours."
+  - "Rest-break and water scheduling that follows the live heat reading, delivered to line supervisors by SMS or a wall display."
+firstConversations:
+  - "Bangladesh Centre for Worker Solidarity (BCWS) and garment worker unions in Dhaka and Gazipur."
+  - "Compliance and sustainability teams of factory groups exporting to Europe, and BGMEA's occupational safety cell."
+  - "Better Work country teams in Bangladesh, Cambodia and Viet Nam, who already run factory OSH assessments."

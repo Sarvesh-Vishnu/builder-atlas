@@ -1,0 +1,48 @@
+id: mental-health-treatment-gap
+title: People with mental health conditions who get no care
+oneLine: "1.2 billion people live with a mental disorder, yet only a third of people with depression get formal care and mental health gets 2% of health budgets."
+who:
+  text: "People with depression, anxiety, psychosis and other conditions everywhere, but most sharply in low- and middle-income countries where specialist workers are scarce and per-person public spending is a few cents."
+  population:
+    value: 1200000000
+    label: people living with a mental disorder (2023)
+    source: { title: "Mental disorders (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/mental-disorders", asOf: "2023" }
+evidence:
+  - claim: "In 2023, nearly 1 in every 7 people (1.2 billion) around the world were living with a mental disorder."
+    source: { title: "Mental disorders (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/mental-disorders", asOf: "2023" }
+  - claim: "Only 40% of people with psychosis and only one third of people with depression receive formal mental health care."
+    source: { title: "Mental disorders (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/mental-disorders", asOf: "2026-09-11" }
+  - claim: "Mental health accounts for only 2% of health budgets, with spending ranging from US$ 65 per person in high-income countries to US$ 0.04 in low-income countries."
+    source: { title: "WHO releases new reports and estimates highlighting urgent gaps in mental health", publisher: "World Health Organization", url: "https://www.who.int/news/item/02-09-2025-who-releases-new-reports-and-estimates-highlighting-urgent-gaps-in-mental-health", asOf: "2025-09-02" }
+  - claim: "There is a global median of just 13 mental health workers per 100,000 people."
+    source: { title: "WHO releases new reports and estimates highlighting urgent gaps in mental health", publisher: "World Health Organization", url: "https://www.who.int/news/item/02-09-2025-who-releases-new-reports-and-estimates-highlighting-urgent-gaps-in-mental-health", asOf: "2025-09-02" }
+archetypes: [services, aging, mixed]
+supply:
+  - { name: "Friendship Bench", kind: ngo, what: "Lay health worker talk therapy for depression on park benches; started in Zimbabwe and replicated in 12 countries, with a toolkit for others to adopt.", url: "https://www.friendshipbench.org/" }
+  - { name: "StrongMinds", kind: ngo, what: "Free group talk therapy for depression led by trained laypeople in Uganda, Zambia and expanding to Kenya, Tanzania and Rwanda.", url: "https://strongminds.org/" }
+  - { name: "Sangath", kind: research, what: "Indian organisation delivering and testing psychosocial interventions by non-specialist health workers, plus digital tools.", url: "https://sangath.in/" }
+payers:
+  - { who: "Ministries of health and national insurance schemes", type: state, why: "Can put lay-counsellor and primary-care mental health onto benefit packages; budgets are small (2%) but the case for task-shifting is cheap per person." }
+  - { who: "Employers", type: employer, why: "Pay for employee assistance and counselling to cut absence and turnover, mostly for formal workers in services economies." }
+  - { who: "Private health insurers", type: insurer, why: "Cover teletherapy in middle-income markets where outpatient mental health is being added to policies." }
+  - { who: "Users paying out of pocket", type: user, why: "Urban middle-class users pay for app and teletherapy subscriptions, but this does not reach the poorest." }
+graveyard:
+  - { name: "Woebot (consumer app)", what: "AI chatbot delivering CBT-style support directly to consumers.", blocker: regulation, lesson: "Shut its core app in mid-2025; the founder told STAT it was largely due to the cost and challenge of meeting FDA marketing-authorisation requirements. Clinical claims bring regulatory cost that a consumer app has to be able to bear.", url: "https://www.statnews.com/2025/07/02/woebot-mental-health-chatbot-shuts-down-founder-says-ai-moving-faster-than-regulators/" }
+blockers: [payer, trust, regulation, behaviour]
+lenses:
+  profit: { score: 3, why: "Employers and insurers pay in middle-income cities; the larger unmet need in poor and rural places depends on public budgets." }
+  meaning: { score: 4, why: "Lay-counsellor models keep you close to clients and counsellors; a pure app business can drift far from them." }
+  purpose: { score: 5, why: "Over a billion people affected and most untreated; even modest coverage gains change lives at scale." }
+skills: [health, software, community, languages]
+timeToFirstValue: months
+capital: low
+crowding: { level: crowded, note: "Consumer therapy and chatbot apps are crowded in rich and urban markets; tools for lay counsellors and public primary care in low-income settings are far sparser." }
+buildAngles:
+  - "Supervision and fidelity tools for lay counsellors (session checklists, audio review, caseload tracking) that programmes like Friendship Bench or StrongMinds could run in more places."
+  - "A screening and referral flow for primary health workers in a local language, using validated questionnaires such as PHQ-9, that hands people on to a counsellor."
+  - "Follow-up by SMS or IVR for people who start treatment, to cut drop-out between sessions."
+firstConversations:
+  - "Friendship Bench, StrongMinds and Sangath programme staff, who train and supervise lay counsellors."
+  - "District mental health programme officers in India and community health worker supervisors in East Africa."
+  - "Psychiatry and clinical psychology departments at medical colleges that run community outreach."
+  - "Peer-support groups and caregiver associations, e.g. families of people living with schizophrenia."

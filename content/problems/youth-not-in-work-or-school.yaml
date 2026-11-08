@@ -1,0 +1,47 @@
+id: youth-not-in-work-or-school
+title: Young people not in work, education or training
+oneLine: "One in five young people worldwide, more than 257 million, is not in employment, education or training, and more than two out of three of them are young women."
+who:
+  text: "People aged 15 to 24 outside work and school, concentrated in the Arab States, Northern Africa and South Asia (especially young women) and in fast-growing young populations in sub-Saharan Africa."
+  population:
+    value: 257000000
+    label: young people (15–24) not in employment, education or training (2025)
+    source: { title: "Global Employment Trends for Youth 2026: youth unemployment rises as young people face harder road to decent work", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work", asOf: "2025" }
+evidence:
+  - claim: "The global NEET rate increased slightly to 20 per cent, affecting more than 257 million people, and youth unemployment rose to 12.4 per cent in 2025, or 67 million unemployed people aged 15 to 24."
+    source: { title: "Global Employment Trends for Youth 2026: youth unemployment rises as young people face harder road to decent work", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work", asOf: "2025" }
+  - claim: "In 2025, more than two out of every three youth in NEET status were women, and at 27.4 per cent the NEET rate of young women was more than double that of young men (13.1 per cent)."
+    source: { title: "Global Employment Trends for Youth 2026: Back to the future (Executive summary)", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2026-08/35066_PDFA_Web_ENG.pdf", asOf: "2025" }
+  - claim: "In the Arab States and Northern Africa at least one in three young people is in NEET status (NEET rates of 32.4 per cent and 30.1 per cent, respectively); the NEET rate in sub-Saharan Africa was 21.6 per cent."
+    source: { title: "Global Employment Trends for Youth 2026: Back to the future (Executive summary)", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2026-08/35066_PDFA_Web_ENG.pdf", asOf: "2025" }
+  - claim: "Nearly nine in ten young workers aged 15 to 29 in low- and lower-middle-income countries are employed informally."
+    source: { title: "Global Employment Trends for Youth 2026: youth unemployment rises as young people face harder road to decent work", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work", asOf: "2026-08-11" }
+archetypes: [agrarian, mixed, services]
+supply:
+  - { name: "ILO youth employment programme", kind: multilateral, what: "Research, data and policy support on youth employment, apprenticeships and NEET reduction.", url: "https://www.ilo.org/youth" }
+  - { name: "Harambee Youth Employment Accelerator", kind: ngo, what: "South African not-for-profit social enterprise on youth unemployment; anchor partner in SA Youth, a free national network connecting young job seekers to jobs and skills opportunities.", url: "https://www.harambee.co.za/" }
+payers:
+  - { who: "Labour and skills ministries, public employment services", type: state, why: "Run apprenticeship, placement and youth guarantee schemes and pay per placement or per trainee." }
+  - { who: "Employers hiring entry-level staff (retail, BPO, logistics, hospitality)", type: employer, why: "Pay for screening and matching that cuts early attrition among first-time hires." }
+  - { who: "Platforms and staffing firms", type: platform, why: "Take a fee from employers for placing workers; gig and staffing platforms already recruit heavily among young people." }
+  - { who: "Development donors and foundations funding youth jobs", type: donor, why: "Youth employment is a top donor priority in Africa and the Middle East, usually paying for outcomes such as job placements." }
+graveyard: []
+graveyardNote: "No well-documented shutdowns found in our searches for failed youth job-matching startups or closed youth employment programmes in Africa, the Middle East or South Asia. Many training programmes have weak evaluated impact, but we did not cite any without a specific source."
+blockers: [distribution, unit-economics, trust, behaviour]
+lenses:
+  profit: { score: 3, why: "Employers and governments pay per placement; margins are thin unless the matching is cheap and retention is high." }
+  meaning: { score: 4, why: "You work with young people and the employers who hire them, and see who gets a first job." }
+  purpose: { score: 4, why: "A quarter-billion young people idle at the start of working life, with long-term scarring for earnings, especially for young women." }
+skills: [software, data, community, operations]
+timeToFirstValue: months
+capital: low
+crowding: { level: crowded, note: "Job boards, training providers and youth programmes are many; tools that reach young women kept home by care duties or social norms, and that work for informal-sector jobs, are far fewer." }
+buildAngles:
+  - "A low-data job and apprenticeship matcher that works over WhatsApp or voice for young people without CVs, sold per hire to local employers."
+  - "Home-based or near-home work and training for young women in the Arab States, Northern Africa or South Asia, where NEET rates for young women are highest."
+  - "Verified skills records for informal work (repair, tailoring, delivery) so young informal workers can prove experience to formal employers."
+firstConversations:
+  - "Public employment service offices and youth employment centres in the target city."
+  - "Harambee in South Africa and similar youth placement organisations elsewhere."
+  - "Technical and vocational training institutes (ITIs in India, TVET colleges in Kenya or Nigeria) and their placement officers."
+  - "Women's self-help groups and community centres where young women outside work and school can be reached."

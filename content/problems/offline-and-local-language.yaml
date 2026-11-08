@@ -1,0 +1,51 @@
+id: offline-and-local-language
+title: Offline, or online but not served in your language
+oneLine: "2.2 billion people are still offline, and 3.1 billion live under mobile broadband coverage but don't use it; cost, skills and irrelevant content keep them out."
+who:
+  text: "People in low- and middle-income countries, mostly rural, poorer, older and female, who either have no connection or have coverage but no affordable device, no digital skills, or no services in a language they read or speak."
+  population:
+    value: 2200000000
+    label: people offline
+    source: { title: "Facts and Figures 2025", publisher: "International Telecommunication Union", url: "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/", asOf: "2025-11" }
+evidence:
+  - claim: "2.2 billion people remain offline, most of them in low and middle income countries."
+    source: { title: "Facts and Figures 2025", publisher: "International Telecommunication Union", url: "https://www.itu.int/itu-d/reports/statistics/facts-figures-2025/", asOf: "2025-11" }
+  - claim: "38% of the world's population (3.1 billion people) live in areas covered by mobile broadband but do not use it, against a coverage gap of around 300 million people (4%)."
+    source: { title: "GSMA calls for renewed focus on closing the usage gap as more than 3 billion people remain offline despite available mobile internet services", publisher: "GSMA", url: "https://gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/", asOf: "2025-09-09" }
+  - claim: "In low- and middle-income countries an entry-level internet-enabled device represents 16% of average monthly income, rising to 48% for the poorest 20%; GSMA names lack of relevant content and digital skills and literacy among the barriers."
+    source: { title: "GSMA calls for renewed focus on closing the usage gap as more than 3 billion people remain offline despite available mobile internet services", publisher: "GSMA", url: "https://gsma.com/newsroom/press-release/gsma-calls-for-renewed-focus-on-closing-the-usage-gap-as-more-than-3-billion-people-remain-offline-despite-available-mobile-internet-services/", asOf: "2025-09-09" }
+  - claim: "40% of the global population does not access education in a language they understand."
+    source: { title: "40% don't access education in a language they understand", publisher: "UNESCO Global Education Monitoring Report", url: "https://www.unesco.org/gem-report/en/articles/40-dont-access-education-language-they-understand", asOf: "2016" }
+archetypes: [agrarian, mixed]
+supply:
+  - { name: "Bhashini (Government of India)", kind: government, what: "National language-technology mission offering translation and speech APIs for Indian languages.", url: "https://bhashini.gov.in/" }
+  - { name: "AI4Bharat (IIT Madras)", kind: research, what: "Open-source translation, speech recognition, speech synthesis and datasets covering all 22 scheduled Indian languages.", url: "https://ai4bharat.iitm.ac.in/" }
+  - { name: "Masakhane", kind: research, what: "Grassroots community building NLP research and datasets for African languages.", url: "https://www.masakhane.io/" }
+  - { name: "Karya", kind: company, what: "Pays rural workers for speech and text data collection, including speech datasets in 22 Indian languages.", url: "https://www.karya.in/" }
+  - { name: "Kiwix", kind: ngo, what: "Free offline reader that packages Wikipedia and other educational sites for use without a connection.", url: "https://www.kiwix.org/en/about/" }
+payers:
+  - { who: "Governments digitising services (benefits, land records, health)", type: state, why: "A service that only works online in the official language fails its target users; ministries pay for vernacular and offline-capable channels." }
+  - { who: "Telcos and handset makers", type: platform, why: "The 3.1 billion usage gap is their unconverted market; local-language content and onboarding grow data revenue." }
+  - { who: "Banks, insurers and agri-input companies selling to rural customers", type: buyer, why: "They need to reach and serve customers in their own language, often by voice or SMS, to cut field-agent costs." }
+  - { who: "Foundations funding language data and digital inclusion", type: donor, why: "Low-resource language datasets are a public good that donors fund because no single company will." }
+graveyard:
+  - { name: "Free Basics in India (Facebook)", what: "Zero-rated access to a curated set of sites, offered through Indian carriers.", blocker: regulation, lesson: "Telecom regulator TRAI banned differential data pricing in February 2016 and Facebook withdrew the service in India days later; access offered on a platform's terms ran into net-neutrality rules and public distrust.", url: "https://thenextweb.com/news/facebook-admits-defeat-and-shuts-down-free-basics-in-india" }
+  - { name: "Loon (Alphabet)", what: "Stratospheric balloons to deliver mobile internet to unconnected areas.", blocker: unit-economics, lesson: "Ended in 2021 because the path to commercial viability proved much longer and riskier than hoped; coverage was never the main gap, usage is.", url: "https://x.company/projects/loon/" }
+blockers: [unit-economics, distribution, data, infrastructure]
+lenses:
+  profit: { score: 3, why: "Enterprise and government buyers pay for vernacular voice and offline-first channels; selling to the offline user directly rarely covers costs." }
+  meaning: { score: 4, why: "Testing with first-time users in their own language keeps you in villages and community centres, not dashboards." }
+  purpose: { score: 4, why: "Billions are cut off from services that are moving online; language and offline support decide whether digitisation includes or excludes them." }
+skills: [software, languages, design, data]
+timeToFirstValue: weeks
+capital: low
+crowding: { level: some, note: "Language-model and dataset work is active (Bhashini, AI4Bharat, Masakhane, Karya) but finished, offline-capable services built on it for specific needs are still scarce." }
+buildAngles:
+  - "A voice-first, low-bandwidth front end for one government service (pension status, ration entitlement, crop insurance claim) in one regional language, built on open speech models."
+  - "An offline-first app template that syncs over SMS or intermittent data, for field workers who collect forms where coverage drops."
+  - "A local-language evaluation set for one domain (health, farming advice), so builders can measure whether a model actually answers correctly in that language."
+firstConversations:
+  - "Common Service Centre operators and village-level entrepreneurs in India who already help people use online government services."
+  - "Agricultural extension officers and farmer producer organisations who field questions in local languages."
+  - "Masakhane and AI4Bharat contributors working on the language you want to support."
+  - "Public libraries and community radio stations in the target district."

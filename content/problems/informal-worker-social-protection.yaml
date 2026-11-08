@@ -1,0 +1,44 @@
+id: informal-worker-social-protection
+title: Informal workers with no pension, insurance or sick pay
+oneLine: "Most of the world's workers are informal, and billions have no sick pay, no injury cover and no social protection of any kind."
+who:
+  text: "Street vendors, domestic workers, farm labourers, home-based workers, construction and gig workers in the informal economy, who lose income the day they fall sick, get injured or grow old."
+  population:
+    value: 2000000000
+    label: people in informal employment, 2024 (more than)
+    source: { title: "World Employment and Social Outlook: May 2025 Update", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2025-05/WESOUpdate_May2025_1.pdf", asOf: "2024" }
+evidence:
+  - claim: "More than 2 billion people were in informal employment in 2024, representing 57.8 per cent of all employed workers worldwide."
+    source: { title: "World Employment and Social Outlook: May 2025 Update", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2025-05/WESOUpdate_May2025_1.pdf", asOf: "2024" }
+  - claim: "For the first time more than half of the world's population is covered by some form of social protection, but 3.8 billion people are still entirely unprotected."
+    source: { title: "World Social Protection Report 2024-26: Executive Summary", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2024-09/SOCPRO_WSPR_2024_Executive_Summary_EN_Web.pdf", asOf: "2024-09" }
+  - claim: "56.1 per cent of the world's labour force is legally entitled to sickness benefits, meaning 4.1 billion working-age persons are not legally protected; 37.4 per cent of workers have employment injury protection, leaving 2.3 billion workers totally uncovered."
+    source: { title: "World Social Protection Report 2024-26: Executive Summary", publisher: "International Labour Organization", url: "https://www.ilo.org/sites/default/files/2024-09/SOCPRO_WSPR_2024_Executive_Summary_EN_Web.pdf", asOf: "2024-09" }
+archetypes: [agrarian, services, mixed]
+supply:
+  - { name: "SEWA (Self Employed Women's Association)", kind: ngo, what: "India's union of informal women workers; runs social security services and piloted heatwave income insurance for members.", url: "https://www.sewa.org/" }
+  - { name: "ILO Social Protection Department", kind: multilateral, what: "Tracks coverage in the World Social Protection Report and advises governments on extending schemes to informal workers.", url: "https://www.ilo.org/resource/article/world-social-protection-report-2024-26-figures" }
+payers:
+  - { who: "Governments running contributory or tax-funded schemes", type: state, why: "They co-fund pensions and insurance for informal workers and need cheap enrolment, contribution collection and payout rails." }
+  - { who: "Insurers and micro-insurers", type: insurer, why: "Informal workers are an uninsured market if distribution and premium collection cost little enough." }
+  - { who: "Gig and delivery platforms", type: platform, why: "New labour codes are starting to require platform contributions to worker welfare funds." }
+  - { who: "Workers themselves, in small regular amounts", type: user, why: "Many will pay small daily or weekly contributions if collection fits irregular income." }
+graveyard:
+  - { name: "NPS-Lite / Swavalamban (India)", what: "Low-cost government co-contributory pension for unorganised-sector workers introduced in 2010; fresh enrolment ceased after the Atal Pension Yojana launched in 2015.", blocker: regulation, lesson: "A voluntary micro-pension was displaced when the state launched its own guaranteed scheme. Products for informal workers live or die by where government schemes are heading; build on their rails rather than beside them.", url: "https://www.pfrda.org.in/web/pfrda/schemes/national-pension-system/nps-lite" }
+blockers: [distribution, payer, trust, behaviour]
+lenses:
+  profit: { score: 2, why: "Premiums are tiny and collection is costly; money mostly comes from state or insurer contracts, not workers." }
+  meaning: { score: 5, why: "The work is enrolment camps, union meetings and claim follow-ups with workers in person." }
+  purpose: { score: 5, why: "Billions of people one illness away from losing income; closing even part of the gap is enormous." }
+skills: [policy, finance, software, community, languages]
+timeToFirstValue: months
+capital: low
+crowding: { level: some, note: "Governments and unions are active; the gap is in last-mile enrolment, contribution collection and claims help that sit on top of existing state schemes." }
+buildAngles:
+  - "An assisted-enrolment and claims helper for existing state schemes (in India, schemes linked to e-Shram registration), run by union or SHG field workers in local languages."
+  - "Micro-contribution collection that matches irregular income: round-ups on UPI or mobile-money receipts into a pension or insurance account."
+  - "A parametric income-protection product (heat, rain) built with a union and an insurer, where payouts are automatic and need no claim form."
+firstConversations:
+  - "SEWA (Ahmedabad) and other unions of informal workers: domestic workers' unions, street vendors' associations (NASVI in India)."
+  - "WIEGO (Women in Informal Employment: Globalizing and Organizing) and its member organisations in Africa and Latin America."
+  - "Labour welfare boards for construction workers, and the district officials who run state-scheme enrolment camps."

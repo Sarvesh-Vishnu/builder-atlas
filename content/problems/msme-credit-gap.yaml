@@ -1,0 +1,40 @@
+id: msme-credit-gap
+title: Small firms in developing economies that can't get credit
+oneLine: "Formal small and medium firms in developing economies face a financing gap estimated at US$5.7 trillion, and informal firms add more on top."
+who:
+  text: "Micro, small and medium enterprises in emerging and developing economies (traders, workshops, small manufacturers, service businesses) that have cash flow but no collateral or credit history a bank accepts."
+evidence:
+  - claim: "IFC estimates a financing gap attributed to formal MSMEs in 119 emerging market and developing economies of US$5.7 trillion as of 2019, equivalent to 19 percent of their GDP, against potential demand of US$10.3 trillion and a credit supply of US$4.6 trillion."
+    source: { title: "MSME Finance Gap", publisher: "SME Finance Forum (IFC)", url: "https://www.smefinanceforum.org/news/11526737", asOf: "2019" }
+  - claim: "Informal enterprises in these countries add an estimated US$2.1 trillion in potential demand for finance, equal to 8 percent of GDP."
+    source: { title: "MSME Finance Gap", publisher: "SME Finance Forum (IFC)", url: "https://www.smefinanceforum.org/news/11526737", asOf: "2019" }
+  - claim: "SMEs represent around 90 percent of all businesses and account for more than half of global employment."
+    source: { title: "Small and Medium Enterprises (SMEs) Finance", publisher: "World Bank", url: "https://www.worldbank.org/en/topic/smefinance", asOf: "2026" }
+archetypes: [manufacturing, services, mixed]
+supply:
+  - { name: "SME Finance Forum", kind: multilateral, what: "G20-founded, IFC-managed network of SME lenders; publishes the MSME finance gap data.", url: "https://www.smefinanceforum.org/news/11526737" }
+  - { name: "IFC MSME Finance", kind: multilateral, what: "Invests in and advises banks and fintechs that lend to MSMEs, including women-owned SMEs.", url: "https://www.ifc.org/en/what-we-do/sector-expertise/financial-institutions/msme-finance" }
+payers:
+  - { who: "Banks, NBFCs and fintech lenders", type: platform, why: "They pay for underwriting data, origination and collections tools that let them lend to thin-file firms without losing money." }
+  - { who: "Large buyers and anchor firms", type: buyer, why: "Supply-chain finance for their small suppliers keeps their supply stable, and they hold the invoice data that makes lending safe." }
+  - { who: "DFIs and credit-guarantee schemes", type: donor, why: "They fund first-loss guarantees and technical assistance to push lenders down-market." }
+  - { who: "The MSMEs themselves", type: user, why: "They pay interest and fees, and will pay for bookkeeping that makes them bankable." }
+graveyard:
+  - { name: "Lidya (Nigeria)", what: "Digital lender offering collateral-free loans to small businesses; raised about $16.45 million and shut down in October 2025 citing severe financial distress.", blocker: unit-economics, lesson: "Collateral-free SME lending in a high-inflation, high-rate economy needs cheap, stable funding and tight collections; data-driven underwriting alone was not enough.", url: "https://businessday.ng/technology/article/lidya-shuts-down-after-raising-16-45m/" }
+blockers: [data, unit-economics, trust, regulation]
+lenses:
+  profit: { score: 4, why: "Lenders pay well for anything that cuts default rates or acquisition cost; this is one of the few problems here with a clear B2B buyer." }
+  meaning: { score: 3, why: "You can sit with shop owners, but much of the day is credit models and lender integrations." }
+  purpose: { score: 4, why: "Credit lets small firms hire and survive bad months; at trillions of dollars of unmet demand the ceiling is large." }
+skills: [finance, data, software, policy]
+timeToFirstValue: months
+capital: high
+crowding: { level: crowded, note: "Many fintech lenders and DFI programmes; the open space is in tools that sit under lenders (data, bookkeeping, collections) rather than another balance-sheet lender." }
+buildAngles:
+  - "Bookkeeping-to-credit-file: a simple ledger app for micro-firms that exports the cash-flow history a lender's underwriting needs, with the firm's consent."
+  - "Invoice and order data connectors for anchor buyers so their suppliers can get supply-chain finance without paper."
+  - "Collections and early-warning tooling for small NBFCs and cooperatives lending to MSMEs."
+firstConversations:
+  - "SME Finance Forum member institutions and their regional events."
+  - "Trader and manufacturer associations in an industrial cluster (for example a district MSME association in Tiruppur or Ludhiana, or a Lagos market association)."
+  - "Credit officers at a small-finance bank or microfinance institution moving up to small-business loans."

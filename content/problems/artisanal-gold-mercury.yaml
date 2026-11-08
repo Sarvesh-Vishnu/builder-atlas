@@ -1,0 +1,47 @@
+id: artisanal-gold-mercury
+title: Mercury in artisanal and small-scale gold mining
+oneLine: "Small-scale gold miners use mercury to bind gold; the sector is the largest human source of mercury in the air, and miners and their families breathe it."
+who:
+  text: "Artisanal and small-scale gold miners and nearby communities in over 80 countries, especially in sub-Saharan Africa, South America and Southeast Asia, who amalgamate ore with mercury and burn it off in the open, often at home."
+  population:
+    value: 15000000
+    label: artisanal and small-scale gold miners (approximate)
+    source: { title: "Mercury and artisanal and small-scale gold mining: Review of global use estimates and considerations for promoting mercury-free alternatives (Ambio 52, 833–852)", publisher: "Keane et al., Ambio (Springer)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10073365", asOf: "2023-03" }
+evidence:
+  - claim: "Annual global mercury emissions to air from artisanal and small-scale gold mining were estimated at 838 tonnes (range 675 to 1000 tonnes), about 38 percent of total estimated anthropogenic air emissions from all sectors, per the 2018 UNEP Global Mercury Assessment."
+    source: { title: "Mercury and artisanal and small-scale gold mining: Review of global use estimates and considerations for promoting mercury-free alternatives (Ambio 52, 833–852)", publisher: "Keane et al., Ambio (Springer)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10073365", asOf: "2018" }
+  - claim: "Annual mercury use in artisanal and small-scale gold mining was estimated at 2059 tonnes (range 897 to 3131 tonnes); the sector is present in over 80 countries and employs approximately 15 million miners."
+    source: { title: "Mercury and artisanal and small-scale gold mining: Review of global use estimates and considerations for promoting mercury-free alternatives (Ambio 52, 833–852)", publisher: "Keane et al., Ambio (Springer)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10073365", asOf: "2023-03" }
+  - claim: "Artisanal and small-scale miners produce 20 percent of the world's gold each year, and more than 100 million people depend on the sector directly or indirectly for their livelihood."
+    source: { title: "About planetGOLD", publisher: "planetGOLD (GEF / UNEP)", url: "https://www.planetgold.org/about", asOf: "2026" }
+archetypes: [resource]
+countries: [GHA, PER, IDN, BFA, COL, GUY]
+supply:
+  - { name: "planetGOLD", kind: multilateral, what: "GEF-funded, UNEP-led programme in 27 countries on mercury-free processing, formalisation, finance and market access for small-scale miners.", url: "https://www.planetgold.org/about" }
+  - { name: "Artisanal Gold Council", kind: ngo, what: "Mercury-reduction projects, gold-recovery research, women's cooperatives and supply-chain formalisation; reports 15 mercury-free facilities built.", url: "https://www.artisanalgold.org/" }
+  - { name: "Alliance for Responsible Mining (Fairmined)", kind: ngo, what: "Fairmined certification standard and responsible supply chains for small-scale mining organisations in Latin America and Africa.", url: "https://www.responsiblemines.org/en/" }
+payers:
+  - { who: "Jewellers, refiners and electronics brands buying responsibly sourced gold", type: buyer, why: "They pay certification premiums (Fairmined) and need traceability to defend supply chains; this is where margin sits." }
+  - { who: "Miners and mine-site cooperatives", type: user, why: "Mercury-free methods that recover more gold pay for themselves; miners pay for tools that raise their recovery rate, not for health alone." }
+  - { who: "National governments under the Minamata Convention, with GEF funds", type: state, why: "Countries with significant ASGM must act on mercury use and can draw on GEF-financed programmes such as planetGOLD." }
+  - { who: "Gold buyers and traders offering pre-finance", type: buyer, why: "Miners use mercury partly because it is cheap and fast; whoever pre-finances equipment can be repaid in gold." }
+graveyard: []
+graveyardNote: "No documented failures found in searches for failed mercury-free processing centres, closed ASGM traceability startups, or abandoned mercury-retort programmes. The review literature notes that mercury-free alternatives are often not adopted, but we found no single named, documented shutdown to cite."
+blockers: [unit-economics, trust, regulation, behaviour]
+lenses:
+  profit: { score: 3, why: "Traceability and recovery-improving equipment can earn money from refiners and brands; selling health benefits to informal miners does not." }
+  meaning: { score: 4, why: "The work happens at mine sites with miners and cooperatives, though often far from where a builder lives." }
+  purpose: { score: 4, why: "The largest single source of human mercury air pollution, with direct exposure for miners, children and nearby water and fish." }
+skills: [hardware, data, operations, community, finance]
+timeToFirstValue: years
+capital: medium
+crowding: { level: some, note: "A few serious programmes (planetGOLD, AGC, ARM/Fairmined) cover parts of 27+ countries; software for traceability and recovery measurement at the mine site is thin." }
+buildAngles:
+  - "A cheap, phone-based logbook for cooperatives that records ore, gold recovered and mercury bought per batch, building the evidence that a mercury-free method recovers more gold."
+  - "A traceability layer from cooperative to exporter that a refiner or Fairmined-certified buyer would pay for."
+  - "A finance-matching tool that lets gold buyers pre-finance mercury-free equipment and get repaid in gold."
+firstConversations:
+  - "planetGOLD country teams (e.g. in Ghana, Peru, Indonesia or Burkina Faso) who already work with mine sites."
+  - "Fairmined-certified mining organisations listed by the Alliance for Responsible Mining."
+  - "Artisanal Gold Council project staff working on mercury-free facilities."
+  - "National Minamata Convention focal points who write the country's ASGM National Action Plan."

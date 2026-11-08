@@ -1,0 +1,46 @@
+id: unpaid-care-burden
+title: Unpaid care work keeping women out of paid work
+oneLine: "708 million women are outside the labour force because of unpaid care responsibilities; women do 76.2% of all unpaid care hours."
+who:
+  text: "Women who care for children, older relatives or sick family members without pay and so cannot take or keep a paid job. The share is highest in Northern Africa, the Arab States and Asia and the Pacific."
+  population:
+    value: 708000000
+    label: women outside the labour force because of care responsibilities (2023)
+    source: { title: "Unpaid care work prevents 708 million women from participating in the labour market", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/unpaid-care-work-prevents-708-million-women-participating-labour-market", asOf: "2023" }
+evidence:
+  - claim: "708 million women are outside the labour force because of care responsibilities, compared with 40 million men, out of 748 million people in total."
+    source: { title: "Unpaid care work prevents 708 million women from participating in the labour market", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/unpaid-care-work-prevents-708-million-women-participating-labour-market", asOf: "2023" }
+  - claim: "Among women outside the labour force, the share citing care responsibilities is 63% in Northern Africa, 59% in the Arab States, 52% in Asia and the Pacific and 47% in Latin America and the Caribbean; among prime-age women (25 to 54) two-thirds cite care, which is 379 million women."
+    source: { title: "Unpaid care work prevents 708 million women from participating in the labour market", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/unpaid-care-work-prevents-708-million-women-participating-labour-market", asOf: "2024-10-29" }
+  - claim: "16.4 billion hours per day are spent in unpaid care work in 64 countries; women perform 76.2 per cent of the total, and valued at an hourly minimum wage this work would equal 9 per cent of global GDP."
+    source: { title: "ILO calls for urgent action to prevent looming global care crisis", publisher: "International Labour Organization", url: "https://www.ilo.org/resource/news/ilo-calls-urgent-action-prevent-looming-global-care-crisis", asOf: "2018-06-28" }
+archetypes: [agrarian, mixed, aging, manufacturing]
+supply:
+  - { name: "Kidogo", kind: company, what: "Social franchise of affordable childcare centres in low-income communities in East Africa, run by trained women entrepreneurs.", url: "https://www.kidogo.co/" }
+  - { name: "SEWA (Self Employed Women's Association)", kind: ngo, what: "Trade union of about 3.7 million informal women workers in India, organising services for its members.", url: "https://www.sewa.org/" }
+  - { name: "Global Alliance for Care", kind: multilateral, what: "Multi-stakeholder community of governments, unions, civil society and philanthropies advancing care policy.", url: "https://www.globalallianceforcare.org/en/" }
+payers:
+  - { who: "Governments (childcare, eldercare and early-years budgets)", type: state, why: "Public childcare raises female employment and tax receipts; this is the payer that reaches informal workers." }
+  - { who: "Employers of large female workforces (garment factories, plantations, hospitals)", type: employer, why: "On-site or subsidised childcare cuts absence and turnover; some countries mandate crèches above a headcount." }
+  - { who: "Parents", type: user, why: "Low-income parents do pay small daily fees for nearby childcare if it is cheap and trusted, which is what social franchises build on." }
+  - { who: "Diaspora family members", type: diaspora, why: "Remittances already fund care for children and elderly parents left at home; a paid care service is a direct use." }
+graveyard:
+  - { name: "Mexico's Programa de Estancias Infantiles (subsidised daycare)", what: "Federal subsidy, created in 2007, to daycare centres serving working mothers.", blocker: payer, lesson: "In February 2019 the government moved support from the centres to direct payments to parents, citing irregularities in how centres were run. A care model funded by one public line is exposed to a single budget decision.", url: "https://politica.expansion.mx/presidencia/2019/02/07/amlo-confirma-apoyos-a-directos-padres-por-irregularidades-en-estancias" }
+blockers: [payer, unit-economics, trust]
+lenses:
+  profit: { score: 2, why: "Parents who most need care can pay little, and care is labour-intensive; it works when the state or an employer subsidises it." }
+  meaning: { score: 5, why: "You work directly with mothers, carers and children in their neighbourhoods." }
+  purpose: { score: 5, why: "Hundreds of millions of women's earning lives, plus child development and eldercare, hinge on it." }
+skills: [operations, community, finance, software]
+timeToFirstValue: months
+capital: low
+crowding: { level: sparse, note: "A handful of childcare social enterprises and union-run services; policy coalitions exist, but operating tools for small care providers are rare." }
+buildAngles:
+  - "Back-office software for micro childcare centres (enrolment, fee collection, attendance, subsidy claims) so a home-based crèche can run as a business."
+  - "A matching and booking service for factory or plantation employers to buy childcare places near their workers."
+  - "A diaspora-funded eldercare check-in service: scheduled home visits for ageing parents, paid from abroad."
+firstConversations:
+  - "SEWA members and local SEWA organisers in Gujarat who run or use childcare."
+  - "Kidogo's Mamapreneurs and other home-based childcare providers in Nairobi's informal settlements."
+  - "HR and compliance managers at garment factories, where crèche rules apply."
+  - "Domestic and care worker unions, e.g. affiliates of the International Domestic Workers Federation."

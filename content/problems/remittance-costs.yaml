@@ -1,0 +1,43 @@
+id: remittance-costs
+title: The cost of sending money home
+oneLine: "Sending $200 home still costs migrants over 6% on average, more than twice the 3% SDG target, and costs most for families in sub-Saharan Africa."
+who:
+  text: "Migrant workers sending small, frequent amounts to families in low- and middle-income countries, and the households that depend on them, most of all in countries where remittances are a large share of GDP (Tajikistan, Tonga, Nicaragua, Lebanon, Samoa)."
+evidence:
+  - claim: "In the fourth quarter of 2023, the global average cost of sending $200 was 6.4% of the amount being sent; sending $200 to sub-Saharan Africa cost an average of 7.9%."
+    source: { title: "Remittances Slowed in 2023, Expected to Grow Faster in 2024", publisher: "World Bank", url: "https://www.worldbank.org/en/news/press-release/2024/06/26/remittances-slowed-in-2023-expected-to-grow-faster-in-2024", asOf: "2023-12" }
+  - claim: "Digital remittances had a lower cost of 5%, compared with 7% for non-digital methods."
+    source: { title: "Remittances Slowed in 2023, Expected to Grow Faster in 2024", publisher: "World Bank", url: "https://www.worldbank.org/en/news/press-release/2024/06/26/remittances-slowed-in-2023-expected-to-grow-faster-in-2024", asOf: "2023-12" }
+  - claim: "Officially recorded remittances to low- and middle-income countries were expected to reach $685 billion in 2024; as a share of GDP the list is topped by Tajikistan (45 percent), Tonga (38 percent), Nicaragua (27 percent), Lebanon (27 percent) and Samoa (26 percent)."
+    source: { title: "In 2024, remittance flows to low- and middle-income countries are expected to reach $685 billion", publisher: "World Bank (People Move blog, Ratha, Plaza and Kim)", url: "https://blogs.worldbank.org/en/peoplemove/in-2024--remittance-flows-to-low--and-middle-income-countries-ar", asOf: "2024-12-18" }
+  - claim: "SDG target 10.c: by 2030, reduce to less than 3 per cent the transaction costs of migrant remittances and eliminate remittance corridors with costs higher than 5 per cent."
+    source: { title: "SDG indicator metadata 10.c.1", publisher: "UN Statistics Division", url: "https://unstats.un.org/sdgs/metadata/files/Metadata-10-0c-01.pdf", asOf: "2015" }
+archetypes: [remittance]
+countries: [TJK, TON, NIC, LBN, WSM]
+supply:
+  - { name: "Wise", kind: company, what: "Low-fee international transfers using the mid-market exchange rate with fees shown upfront.", url: "https://wise.com/gb/about/our-story" }
+  - { name: "Mojaloop Foundation", kind: ngo, what: "Open-source software for inclusive instant payment systems, used by central banks and hub operators to cut the cost of connecting providers.", url: "https://mojaloop.io/" }
+payers:
+  - { who: "Migrant senders", type: diaspora, why: "They pay every fee and exchange-rate margin directly, and switch providers for a better rate if they can see it." }
+  - { who: "Remittance and payment providers", type: platform, why: "They pay for compliance, payout networks and FX tooling that lower their own cost per transfer." }
+  - { who: "Central banks and finance ministries in receiving countries", type: state, why: "Remittances are a large share of GDP and foreign exchange; they fund instant-payment rails and price-comparison mandates." }
+  - { who: "Employers of migrant workers", type: employer, why: "Payroll-linked transfers are a benefit some employers and recruiters offer to keep workers." }
+graveyard:
+  - { name: "Azimo (UK)", what: "App for transferring money, mainly to foreign workers; after Papaya Global agreed to buy it in 2022, the acquirer said Azimo's current consumer business would be shut down.", blocker: unit-economics, lesson: "The buyer wanted Azimo's licences and payment technology for business payroll, not its consumer remittance book. Licences and corridors can be worth more than the consumer business built on them.", url: "https://en.globes.co.il/en/article-papaya-global-buys-uk-payments-co-azimo-1001407306" }
+blockers: [regulation, unit-economics, trust, distribution]
+lenses:
+  profit: { score: 4, why: "Fees are paid on every transfer and volumes are huge; but licensing, compliance and FX liquidity make it capital-heavy, and price competition is fierce." }
+  meaning: { score: 3, why: "Senders are reachable in community spaces, but most of the work is compliance and payment plumbing." }
+  purpose: { score: 4, why: "Every point of cost saved goes straight to low-income households; for some countries it is a macroeconomic lever." }
+skills: [finance, software, policy, languages]
+timeToFirstValue: months
+capital: high
+crowding: { level: crowded, note: "Many licensed money transfer operators and digital players on major corridors; small, high-cost corridors (Pacific islands, parts of Africa and Central Asia) remain underserved." }
+buildAngles:
+  - "A price-transparency tool for one high-cost corridor: total cost including FX margin across providers, shown in the sender's language."
+  - "B2B tooling for licensed operators on small corridors (compliance, payout reconciliation) rather than becoming a licensed sender yourself."
+  - "Receiving-end products that put remittances to work: savings or bill-pay on arrival in partnership with a local bank or mobile-money provider."
+firstConversations:
+  - "Migrant worker associations and community centres (Tongan and Samoan churches in Auckland, Tajik communities in Moscow, Nepali workers' groups in the Gulf)."
+  - "Payments teams at central banks running instant-payment or remittance-cost initiatives in receiving countries."
+  - "Compliance and operations staff at a small licensed money transfer operator serving a single corridor."

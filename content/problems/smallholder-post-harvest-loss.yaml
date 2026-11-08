@@ -1,0 +1,40 @@
+id: smallholder-post-harvest-loss
+title: Food lost between harvest and market
+oneLine: "About one-eighth of food is lost after harvest before it reaches retail, with the worst losses in sub-Saharan Africa and in fruit and vegetables."
+who:
+  text: "Smallholder farmers, aggregators and traders who lose crops to pests, heat, poor storage and slow transport between the field and the market, especially in sub-Saharan Africa and for perishables."
+evidence:
+  - claim: "FAO estimates the percentage of food lost globally after harvest, at farm, transport, storage, wholesale and processing levels, at 13.3 percent in 2023, up from 13.0 percent in 2015."
+    source: { title: "SDG Indicator 12.3.1 - Global food losses", publisher: "FAO", url: "https://www.fao.org/sustainable-development-goals-data-portal/data/indicators/1231-global-food-losses", asOf: "2023" }
+  - claim: "Sub-Saharan Africa has the highest regional food loss, at 23.0 percent; fruits and vegetables have the highest commodity loss, rising from 23.2 percent in 2015 to 25.4 percent in 2023."
+    source: { title: "SDG Indicator 12.3.1 - Global food losses", publisher: "FAO", url: "https://www.fao.org/sustainable-development-goals-data-portal/data/indicators/1231-global-food-losses", asOf: "2023" }
+  - claim: "A joint FAO-World Bank report put post-harvest grain losses in sub-Saharan Africa at around $4 billion a year, enough to meet the minimum annual food needs of at least 48 million people."
+    source: { title: "UN calls for better grain storage to reduce Africa's post-harvest losses (on 'Missing Food: The Case of Postharvest Grain Losses in Sub-Saharan Africa')", publisher: "UN News", url: "https://news.un.org/en/story/2011/05/376752", asOf: "2011-05-31" }
+archetypes: [agrarian]
+supply:
+  - { name: "Purdue Improved Crop Storage (PICS)", kind: research, what: "Gates-funded programme commercialising low-cost triple-layer hermetic grain bags through local manufacturers and vendors in seven African focus countries.", url: "https://www.purdue.edu/discoverypark/food/research/pics.php" }
+  - { name: "ColdHubs (Nigeria)", kind: company, what: "Solar-powered walk-in cold rooms at markets and farms, paid per crate per day.", url: "https://www.belfercenter.org/publication/coldhubs-enterprise-wins-harvards-roy-award-environmental-partnership" }
+payers:
+  - { who: "Farmers and traders paying per use", type: user, why: "Pay-as-you-store models work because the saved produce is worth more than the daily fee." }
+  - { who: "Off-takers, processors and exporters", type: buyer, why: "They lose volume and quality to spoilage before produce reaches them and will pay for cold chain or storage on their sourcing routes." }
+  - { who: "Agriculture ministries and food-security programmes", type: state, why: "Storage subsidies and warehouse-receipt schemes are standard policy tools." }
+  - { who: "Foundations and climate/food donors", type: donor, why: "Loss reduction counts toward SDG 12.3 and food-security goals, so pilots get grant money." }
+graveyard:
+  - { name: "YoLa Fresh (Morocco)", what: "Platform connecting farmers directly with a network of 1,000 retailers to reduce food waste; closed three years after founding.", blocker: unit-economics, lesson: "It raised $9 million but could not turn a profit on its logistics operations. Owning the trucks and routes between farm and shop is where post-harvest ventures bleed cash.", url: "https://www.wearetech.africa/en/fils-uk/brief/brief-simple/moroccan-agritech-startup-yola-fresh-closes-amid-funding-woes" }
+blockers: [unit-economics, infrastructure, distribution]
+lenses:
+  profit: { score: 2, why: "Pay-per-use storage can break even locally, but logistics-heavy models have burned through funding; margins per farmer are small." }
+  meaning: { score: 5, why: "You work at markets and farm gates with the people whose income spoils in the sun." }
+  purpose: { score: 4, why: "Lost food is lost income and lost calories in the places that can least afford either." }
+skills: [agriculture, hardware, operations, data]
+timeToFirstValue: months
+capital: medium
+crowding: { level: some, note: "Hermetic bags, solar cold rooms and aggregation platforms exist; the operational software and financing layers around them are thin." }
+buildAngles:
+  - "Operations software for cold-room and warehouse operators: crate check-in, per-day billing by mobile money, occupancy and spoilage logs."
+  - "A price-and-hold tool that tells a farmer storing grain in hermetic bags when local market prices make it worth selling."
+  - "Loss measurement for buyers: a simple protocol and app to log rejected produce by route, so an off-taker can see where cold chain pays."
+firstConversations:
+  - "PICS bag vendors and agro-dealers in Nigeria, Ghana or Tanzania, who hear why farmers do or don't buy storage."
+  - "Market women's and traders' associations at a large produce market (for example Mile 12 in Lagos) and cold-room operators there."
+  - "Farmer producer organisations in India and agricultural extension officers in the target district."

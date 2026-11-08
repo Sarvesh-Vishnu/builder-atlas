@@ -1,0 +1,41 @@
+id: tourism-shock-exposure
+title: Tourism-dependent economies with no buffer against shocks
+oneLine: "When visitors stop, tourism-dependent economies fall hardest; in 2020 the Maldives lost two-thirds of its tourists and the World Bank estimates its economy contracted 28 percent."
+who:
+  text: "Small tourism businesses and workers (guesthouses, dive shops, tour operators, taxi drivers, hotel staff) in island and coastal economies where tourism is the main source of jobs and foreign exchange, such as the Maldives, Fiji and the Caribbean."
+evidence:
+  - claim: "Tourism-dependent Caribbean countries contracted by 9.8 percent in 2020."
+    source: { title: "How the Caribbean Can Avoid Becoming a COVID-19 Long-Hauler", publisher: "International Monetary Fund", url: "https://www.imf.org/en/News/Articles/2021/03/11/na031221-how-the-caribbean-can-avoid-becoming-a-covid-19-long-hauler", asOf: "2021-03-12" }
+  - claim: "Only 555,494 tourists visited the Maldives in 2020, 67 percent lower than the 2019 record of 1.7 million; the World Bank estimates the economy contracted by 28 percent in 2020 and the poverty rate rose by an estimated 5.1 percentage points."
+    source: { title: "Maldives Development Update, April 2021: Executive Summary", publisher: "World Bank", url: "https://thedocs.worldbank.org/en/doc/93bdbd79b45eeb504743f4514f1095e1-0310062021/related/April-2021-MDU-Exec-Summary.pdf", asOf: "2021-04" }
+  - claim: "Based on the IMF's October 2020 projections, real GDP in tourism-dependent Caribbean nations was expected to fall about 12 percent in 2020, and Fiji's could shrink about 21 percent."
+    source: { title: "Wish You Were Here: The pandemic's impact on tourism", publisher: "IMF Finance & Development", url: "https://www.imf.org/en/publications/fandd/issues/2020/12/impact-of-the-pandemic-on-tourism-behsudi", asOf: "2020-12" }
+archetypes: [tourism]
+countries: [MDV, FJI]
+supply:
+  - { name: "CCRIF SPC", kind: multilateral, what: "Parametric catastrophe insurance for Caribbean and Central American governments and utilities, paying out quickly after cyclones, earthquakes and excess rain.", url: "https://www.ccrif.org/about-us" }
+  - { name: "Global Tourism Resilience and Crisis Management Centre", kind: research, what: "Jamaica-linked centre helping tourism destinations prepare for and recover from crises, with projects in the Caribbean and Africa.", url: "https://www.gtrcmc.org/" }
+payers:
+  - { who: "Tourism ministries and tourism boards", type: state, why: "They carry the sector's jobs and foreign-exchange earnings and fund recovery, marketing and small-business relief after shocks." }
+  - { who: "Hotels and resort groups", type: employer, why: "They depend on local suppliers and staff staying in business through a downturn." }
+  - { who: "Insurers and reinsurers", type: insurer, why: "Business-interruption and parametric covers for small tourism firms are a market few serve today." }
+  - { who: "Development banks and donors", type: donor, why: "Climate and shock resilience of small island economies is a funded priority." }
+  - { who: "Small tourism operators", type: user, why: "They pay booking and marketing tools now and would pay for cash-flow and insurance products that fit seasonal income." }
+graveyardNote: "No documented failed ventures found in searches for small tourism business resilience, business-interruption insurance for island tourism SMEs, or tourism-dependent economy diversification startups."
+blockers: [payer, distribution, data, unit-economics]
+lenses:
+  profit: { score: 3, why: "Tourism operators already pay for software, and insurers and governments have budgets; but the markets are small islands, so scale means many countries." }
+  meaning: { score: 4, why: "You work with family-run guesthouses and boat operators, and their good and bad seasons are visible." }
+  purpose: { score: 3, why: "Shocks can wipe out more than a quarter of an economy in a year; buffers for small firms keep people employed, though the population is smaller than other cards." }
+skills: [finance, software, data, operations]
+timeToFirstValue: months
+capital: medium
+crowding: { level: sparse, note: "Government-level catastrophe insurance and recovery agencies exist; products aimed at the small tourism business itself (cash-flow buffers, micro business-interruption cover, direct booking) are scarce." }
+buildAngles:
+  - "Cash-flow forecasting for guesthouses and dive shops that uses forward bookings and flight data to warn of a bad season early."
+  - "A parametric business-interruption micro-cover for small tourism firms, triggered by arrivals data or a storm index, built with a regional insurer."
+  - "A direct-booking and shared-marketing tool for a destination's small operators, run with the tourism board, to cut dependence on a few channels."
+firstConversations:
+  - "Guesthouse and small hotel associations in the Maldives' local islands, or the Fiji and Caribbean hotel and tourism associations."
+  - "Tourism ministry or tourism board teams that ran COVID-era relief for small operators and know who fell through."
+  - "Regional insurers and CCRIF's microinsurance team, to see whether small-firm parametric cover is viable."

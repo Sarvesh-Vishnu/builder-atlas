@@ -1,0 +1,48 @@
+id: assistive-technology-access
+title: People who need assistive products and can't get them
+oneLine: "More than 2.5 billion people need a wheelchair, hearing aid, glasses, prosthesis or other assistive product, and in some poor countries as few as 3% can get one."
+who:
+  text: "Disabled people, older people and people with chronic conditions who need glasses, hearing aids, wheelchairs, prostheses, walking aids or communication devices, concentrated in low- and middle-income countries where devices are paid for out of pocket."
+  population:
+    value: 2500000000
+    label: people who need one or more assistive products
+    source: { title: "Assistive technology (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/assistive-technology", asOf: "2024-01-02" }
+evidence:
+  - claim: "Globally, more than 2.5 billion people need one or more assistive products, and an estimated 3.5 billion people will need assistive technology by 2050."
+    source: { title: "Assistive technology (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/assistive-technology", asOf: "2024-01-02" }
+  - claim: "As few as 3% of people in some low-income countries were reported to have access to the assistive products they need, compared with 90% in some high-income countries."
+    source: { title: "Assistive technology (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/assistive-technology", asOf: "2024-01-02" }
+  - claim: "Of the more than 2.5 billion people who need assistive products, nearly one billion are denied access; around two thirds of people with assistive products reported out-of-pocket payments for them."
+    source: { title: "Almost one billion children and adults with disabilities and older persons in need of assistive technology denied access, according to new report", publisher: "World Health Organization / UNICEF", url: "https://www.who.int/news/item/16-05-2022-almost-one-billion-children-and-adults-with-disabilities-and-older-persons-in-need-of-assistive-technology-denied-access--according-to-new-report", asOf: "2022-05-16" }
+  - claim: "Of 2.2 billion people with near or distance vision impairment, at least 1 billion cases could have been prevented or have yet to be addressed; presbyopia (826 million) is the main cause of unaddressed near vision impairment."
+    source: { title: "Blindness and vision impairment (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment", asOf: "2026-02-10" }
+archetypes: [agrarian, mixed, aging]
+supply:
+  - { name: "BMVSS (Jaipur Foot)", kind: ngo, what: "Free prostheses, calipers, wheelchairs, tricycles and hearing aids through fitment camps in India and abroad.", url: "https://www.jaipurfoot.org/" }
+  - { name: "VisionSpring", kind: ngo, what: "Eye tests and low-cost eyeglasses for low-income people through outreach, shops and partner distribution.", url: "https://visionspring.org/" }
+  - { name: "WHO / UNICEF Global Report on Assistive Technology", kind: multilateral, what: "Global evidence base and policy guidance on assistive technology access, with country assessments.", url: "https://www.who.int/publications/i/item/9789240049451" }
+payers:
+  - { who: "National health and disability schemes (e.g. public insurance, disability ministries)", type: state, why: "Device provision can be put on a public benefit package or procurement list; this is the only payer at population scale." }
+  - { who: "Users and families", type: user, why: "Already pay: WHO/UNICEF report that around two thirds of people with assistive products paid out of pocket. Cheap reading glasses sell at retail." }
+  - { who: "Foundations, CSR budgets and disability NGOs", type: donor, why: "Fund fitment camps and device donations, but this money is lumpy and rarely pays for follow-up and repair." }
+  - { who: "Employers of older or near-vision-dependent workers (garment, electronics assembly)", type: employer, why: "Near-vision glasses raise productivity for precision work; an employer can pay for screening on site." }
+graveyard: []
+graveyardNote: "No documented shutdowns found in searches for failed assistive-technology startups, wheelchair or hearing-aid ventures in low-income countries, or closed device-donation programmes. Absence of write-ups is not evidence of success; donated wheelchairs that don't fit are a common complaint but we found no single documented case to cite."
+blockers: [payer, distribution, infrastructure]
+lenses:
+  profit: { score: 2, why: "Reading glasses and basic hearing aids can be sold at a margin; wheelchairs and prostheses need fitting and follow-up that users can rarely pay for, so it hinges on getting onto a state benefit list." }
+  meaning: { score: 5, why: "The work is fitting a device to a person and watching them walk, hear or read again; you are close to the user every day." }
+  purpose: { score: 5, why: "Nearly a billion people denied access, with the need growing as populations age; a device often decides whether someone can work or go to school." }
+skills: [health, hardware, operations, software]
+timeToFirstValue: months
+capital: medium
+crowding: { level: some, note: "Strong single-device NGOs (Jaipur Foot for limbs, VisionSpring for glasses) and WHO policy work, but screening, fitting, repair and follow-up in between are thin, and almost nobody does it across device types." }
+buildAngles:
+  - "A phone-based screening flow for community health workers that checks near vision and hearing in one visit and routes people to the nearest supplier with stock."
+  - "Stock and repair tracking for camps and district rehab centres, so a fitted wheelchair or hearing aid gets a 6-month check instead of being abandoned."
+  - "A claims and paperwork helper that gets a device onto an existing public scheme (disability certificate, insurance pre-authorisation) instead of relying on donation."
+firstConversations:
+  - "District disability rehabilitation centres and the staff who run fitment camps (in India, the BMVSS camp teams)."
+  - "Disabled persons' organisations at national level, e.g. members of the International Disability Alliance network."
+  - "Optometry schools and vision-screening NGOs that run school or workplace eye camps."
+  - "Older people's associations and pensioner groups, who are the fastest-growing users of glasses and hearing aids."

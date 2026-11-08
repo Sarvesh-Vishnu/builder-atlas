@@ -1,0 +1,47 @@
+id: road-safety
+title: Road deaths and injuries in low- and middle-income countries
+oneLine: "About 1.16 million people die on roads each year, 92% of them in low- and middle-income countries that have around 60% of the world's vehicles."
+who:
+  text: "Pedestrians, motorcyclists, cyclists and passengers in low- and middle-income countries, and above all children and young adults, for whom road crashes are the leading cause of death."
+  population:
+    value: 1160000
+    label: road traffic deaths per year (approximately)
+    source: { title: "Road traffic injuries (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries", asOf: "2026-07-20" }
+evidence:
+  - claim: "Approximately 1.16 million people die each year as a result of road traffic crashes."
+    source: { title: "Road traffic injuries (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries", asOf: "2026-07-20" }
+  - claim: "92% of the world's fatalities on the roads occur in low- and middle-income countries, even though these countries have around 60% of the world's vehicles."
+    source: { title: "Road traffic injuries (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries", asOf: "2026-07-20" }
+  - claim: "Road traffic injuries are the leading cause of death for children and young adults aged 5–29 years."
+    source: { title: "Road traffic injuries (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries", asOf: "2026-07-20" }
+  - claim: "Road traffic crashes cost most countries 3% of their gross domestic product."
+    source: { title: "Road traffic injuries (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries", asOf: "2026-07-20" }
+archetypes: [agrarian, manufacturing, mixed]
+supply:
+  - { name: "iRAP (International Road Assessment Programme)", kind: ngo, what: "Road Star Ratings and the ViDA software to assess roads and rank safety upgrades by lives saved per dollar; supports national road assessment programmes.", url: "https://www.irap.org/" }
+  - { name: "SaveLIFE Foundation", kind: ngo, what: "Indian non-profit working on road engineering, enforcement, trauma care and policy since 2008.", url: "https://savelifefoundation.org/" }
+payers:
+  - { who: "Road agencies, highway authorities and transport ministries", type: state, why: "Own the roads and the budget for engineering fixes; development-bank road loans increasingly require safety assessment." }
+  - { who: "Motor insurers", type: insurer, why: "Pay claims for crashes; telematics, rider training and black-spot data lower their losses." }
+  - { who: "Fleet operators: logistics, ride-hailing, delivery platforms, bus companies", type: employer, why: "Crashes cost them vehicles, drivers and liability; they pay for driver monitoring and route risk tools." }
+  - { who: "Multilateral development banks and road-safety philanthropies", type: donor, why: "Fund road assessment, data systems and city programmes in low- and middle-income countries." }
+graveyard: []
+graveyardNote: "No documented shutdowns found in searches for failed road-safety startups, crash-reporting apps or closed road-safety programmes in low- and middle-income countries. We also looked for India's Ministry of Road Transport crash report to add a national figure but could not load the PDF, so it is not cited."
+blockers: [data, payer, regulation, behaviour]
+lenses:
+  profit: { score: 3, why: "Fleets and insurers pay for driver-risk and telematics tools; public road-engineering work is sold through slow government procurement." }
+  meaning: { score: 3, why: "Much of the work is data and engineering; trauma-care and community work brings you closer to victims and families." }
+  purpose: { score: 5, why: "Over a million deaths a year, mostly of young people, largely preventable with known fixes." }
+skills: [data, software, policy, health, operations]
+timeToFirstValue: months
+capital: low
+crowding: { level: some, note: "Strong global methods (iRAP) and a few national NGOs; local crash data, post-crash care coordination and two-wheeler safety tools are thin." }
+buildAngles:
+  - "A crash-location mapper that geocodes police FIRs or hospital records to find black spots on a district's roads, for the local road agency."
+  - "Driver-risk scoring for small delivery and logistics fleets using phone sensors, sold to the fleet or its insurer."
+  - "An emergency-response coordination tool linking bystander calls, ambulances and the nearest trauma-ready hospital."
+firstConversations:
+  - "District road safety committees and traffic police units that compile crash records."
+  - "Ambulance operators and emergency departments at trauma centres on national highways."
+  - "Fleet managers at logistics, bus and two-wheeler delivery companies."
+  - "National road assessment programmes affiliated with iRAP, and NGOs such as SaveLIFE Foundation."

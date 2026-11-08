@@ -1,0 +1,44 @@
+id: gas-flaring
+title: Gas burned off at oil fields instead of used
+oneLine: "Oil producers flared 167 billion cubic meters of gas in 2025, worth an estimated US$54 billion, instead of selling or using it."
+who:
+  text: "Communities living next to flare sites in oil-exporting countries, and the wider populations of those countries who lose the gas as power, cooking fuel and revenue. Flaring is concentrated in a handful of producers."
+evidence:
+  - claim: "Global gas flaring rose for the third consecutive year in 2025, reaching 167 billion cubic meters (bcm), the highest recorded level since 2019."
+    source: { title: "2026 Global Gas Flaring Tracker Report", publisher: "World Bank, Global Flaring and Methane Reduction Partnership", url: "https://www.worldbank.org/en/programs/gasflaringreduction/publication/2026-global-gas-flaring-tracker-report", asOf: "2025" }
+  - claim: "The gas wasted through flaring in 2025 was worth an estimated US$54 billion."
+    source: { title: "2026 Global Gas Flaring Tracker Report", publisher: "World Bank, Global Flaring and Methane Reduction Partnership", url: "https://www.worldbank.org/en/programs/gasflaringreduction/publication/2026-global-gas-flaring-tracker-report", asOf: "2025" }
+  - claim: "The top 9 largest flaring countries in 2024 were Russia, Iran, Iraq, Venezuela, Mexico, Libya, Algeria, Nigeria and the United States, which together accounted for 83% of all gas flared."
+    source: { title: "Global Gas Flaring Data", publisher: "World Bank, Global Flaring and Methane Reduction Partnership", url: "https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data", asOf: "2024" }
+  - claim: "Under the Zero Routine Flaring by 2030 initiative launched in 2015, 36 governments and 60 oil companies have committed to end routine flaring by 2030 at the latest."
+    source: { title: "Global Flaring and Methane Reduction Partnership (GFMR)", publisher: "World Bank", url: "https://www.worldbank.org/en/programs/gasflaringreduction", asOf: "2026" }
+archetypes: [resource]
+countries: [RUS, IRN, IRQ, VEN, MEX, LBY, DZA, NGA, USA]
+supply:
+  - { name: "World Bank GFMR and Zero Routine Flaring by 2030", kind: multilateral, what: "Multi-donor trust fund and pledge initiative that funds flare-reduction projects and publishes satellite flaring estimates.", url: "https://www.worldbank.org/en/programs/gasflaringreduction" }
+  - { name: "FlareIntel (Capterio)", kind: company, what: "Satellite tracking of every gas flare by asset, company and country, sold by subscription, plus consulting on capture projects.", url: "https://flareintel.com/" }
+payers:
+  - { who: "Oil companies and national oil companies", type: buyer, why: "Methane and flaring rules, investor pressure and ZRF commitments make them pay for monitoring and capture; captured gas can be sold." }
+  - { who: "Regulators and petroleum ministries", type: state, why: "They levy flare penalties and run auctions of flare sites (e.g. Nigeria), and need independent measurement to enforce." }
+  - { who: "Gas buyers: power producers, LPG/CNG distributors, industrial users near fields", type: buyer, why: "Flared gas is a cheap feedstock if someone aggregates and moves it." }
+  - { who: "Climate finance and multilateral trust funds", type: donor, why: "GFMR-type funds pay for project preparation and data in developing producer countries." }
+graveyard:
+  - { name: "Nigerian Gas Flare Commercialisation Programme (NGFCP)", what: "Government plan, approved in 2016, to auction gas at flare sites to third-party investors.", blocker: data, lesson: "By April 2021 the programme sat in limbo, with delays, a lack of data and apparent official indifference frustrating bidders; reliable per-site gas data is the precondition for anyone investing.", url: "https://www.africa-energy.com/news-centre/article/nigerias-gas-flaring-commercialisation-programme-sits-limbo" }
+blockers: [infrastructure, regulation, data, unit-economics]
+lenses:
+  profit: { score: 4, why: "Operators and regulators already pay for satellite monitoring, and captured gas has a market price; the customer is a company with a budget." }
+  meaning: { score: 2, why: "Most of the work is with operators, regulators and satellite data, far from the communities living next to flares." }
+  purpose: { score: 4, why: "Cutting flaring reduces climate emissions and local air pollution and can turn waste into power in energy-poor producers." }
+skills: [data, software, policy, hardware]
+timeToFirstValue: months
+capital: medium
+crowding: { level: some, note: "Satellite monitoring is covered by the World Bank and a few firms such as FlareIntel; small-scale capture and local use at stranded sites remains thin." }
+buildAngles:
+  - "An open per-site flare dashboard for one country's regulator or civil society, reconciling satellite estimates with operator-reported volumes."
+  - "A screening tool that matches flare sites to nearby demand (mini-grids, CNG, LPG bottling) and estimates payback, for investors in flare-site auctions."
+  - "Community-facing alerts and complaint logging near flare sites, feeding data to regulators."
+firstConversations:
+  - "Nigeria's Upstream Petroleum Regulatory Commission (NUPRC) team running the flare commercialisation programme, and the bidders who took part."
+  - "World Bank GFMR staff and Zero Routine Flaring endorsers."
+  - "Environmental justice groups in the Niger Delta and in Iraq's Basra region who document flaring."
+  - "Small gas-to-power and mini-grid developers looking for cheap feedstock near oil fields."

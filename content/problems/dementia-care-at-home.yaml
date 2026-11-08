@@ -1,0 +1,46 @@
+id: dementia-care-at-home
+title: Families caring for someone with dementia at home
+oneLine: "Most dementia care is unpaid and done at home, mainly by women, and the carers get little training or relief."
+who:
+  text: "Spouses, daughters and other relatives looking after a person with dementia at home, worldwide; over 60% of people with dementia live in low- and middle-income countries, where formal services are scarcest."
+  population:
+    value: 57000000
+    label: people living with dementia worldwide
+    source: { title: "Dementia (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/dementia", asOf: "2021" }
+evidence:
+  - claim: "In 2021, 57 million people were living with dementia worldwide, over 60% of whom live in low- and middle-income countries; every year there are nearly 10 million new cases."
+    source: { title: "Dementia (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/dementia", asOf: "2021" }
+  - claim: "In 2019, dementia cost economies globally US$ 1.3 trillion, and approximately 50% of these costs are attributable to care provided by informal carers, who provide on average 5 hours of care and supervision per day."
+    source: { title: "Dementia (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/dementia", asOf: "2019" }
+  - claim: "Women provide 70% of care hours for people living with dementia."
+    source: { title: "Dementia (fact sheet)", publisher: "World Health Organization", url: "https://www.who.int/news-room/fact-sheets/detail/dementia", asOf: "2019" }
+  - claim: "Informal carers provided about 82 billion hours of care to people with dementia living at home in 2015, equal to 2,089 hours per year or 6 hours per day."
+    source: { title: "Global estimates of informal care", publisher: "Alzheimer's Disease International", url: "https://www.alzint.org/resource/global-estimates-of-informal-care/", asOf: "2015" }
+archetypes: [aging, services]
+supply:
+  - { name: "WHO iSupport", kind: multilateral, what: "Free self-help skills and training programme for dementia carers (online plus printable manual), culturally adapted in many countries.", url: "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/isupport" }
+  - { name: "Alzheimer's Disease International", kind: ngo, what: "Global federation that publishes carer-burden estimates and backs national Alzheimer associations' carer services.", url: "https://www.alzint.org/resource/global-estimates-of-informal-care/" }
+payers:
+  - { who: "Public long-term care and health insurers", type: insurer, why: "Carer burnout pushes people into residential care, which costs them far more than supporting the carer at home." }
+  - { who: "Health ministries and municipalities", type: state, why: "National dementia plans commit them to carer support; they commission training and respite." }
+  - { who: "Employers of working carers", type: employer, why: "Carers cut hours or quit; carer-support benefits are a known retention perk in some markets." }
+  - { who: "Adult children paying for a parent's care", type: user, why: "They are the ones searching at 2am, and in many countries the ones paying for any help that exists." }
+graveyard:
+  - { name: "Dementia Concern (Ealing, UK)", what: "Local charity that for more than 40 years ran dementia link workers, home visits, advice and social clubs; set to cease operating on 22 May 2026.", blocker: payer, lesson: "Its chair said the financial position had become unsustainable. Carer support that depends on local grants and donations disappears when they do, with days' notice to families.", url: "https://www.ealing.news/?p=28280" }
+blockers: [payer, distribution, trust]
+lenses:
+  profit: { score: 2, why: "Carers rarely have spare money and insurers or councils buy slowly; consumer apps in this space struggle to charge." }
+  meaning: { score: 5, why: "You work directly with exhausted families, and a single useful tool changes their week." }
+  purpose: { score: 4, why: "Behind most of the 57 million people with dementia is an unpaid carer, usually a woman; better support delays institutional care." }
+skills: [health, design, languages, community]
+timeToFirstValue: months
+capital: low
+crowding: { level: some, note: "WHO's iSupport and national Alzheimer associations cover training; local-language, low-literacy and respite-matching tools for LMIC families are sparse." }
+buildAngles:
+  - "Adapt iSupport content into a voice/WhatsApp course in a regional language (Tamil, Hindi, Bahasa, Swahili), partnering with a national Alzheimer association for content sign-off."
+  - "A behaviour-change log for carers (what happened before an episode, what helped) that produces a one-page summary for the next doctor visit."
+  - "Respite matching for a city: trained volunteers or day-care slots, bookable by the hour, sold to a municipality."
+firstConversations:
+  - "Alzheimer's and Related Disorders Society of India (ARDSI) chapters and their carer support groups."
+  - "Memory clinics in teaching hospitals, where carers wait with the patient and staff know which questions come up every week."
+  - "National Alzheimer associations listed under Alzheimer's Disease International that run helplines; ask what callers ask most."
