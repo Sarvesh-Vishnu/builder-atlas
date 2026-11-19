@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { WorldMap } from "../components/WorldMap";
-import { ArchTag, archColor } from "../components/bits";
+import { archColor } from "../components/bits";
 import { ARCHETYPES } from "../engine/archetype";
 import { ARCHETYPE_IDS } from "../content/schema";
 import { BY_ISO, COUNTRIES, DATA, type MetricKey } from "../data/countries";
@@ -19,6 +19,8 @@ const METRICS: { key: MetricKey; label: string; fmt: (n: number) => string }[] =
   { key: "vulnerableEmp", label: "Vulnerable work", fmt: pct },
   { key: "account", label: "Has an account", fmt: pct },
 ];
+
+const SORTED = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
 
 /** Five quantile bins over the countries that have the metric. */
 function bins(key: MetricKey): number[] {
@@ -115,19 +117,43 @@ export function Atlas() {
         </div>
       )}
 
+      <div className="jump">
+        <label htmlFor="jump">Jump to a country</label>
+        <select id="jump" value="" onChange={(e) => e.target.value && nav(`/country/${e.target.value}`)}>
+          <option value="">Choose…</option>
+          {SORTED.map((c) => (
+            <option key={c.iso3} value={c.iso3}>
+              {c.name}
+            </option>
+          ))}
+        </select>
+        <Link to="/countries" className="small">
+          or see all {COUNTRIES.length} as a table
+        </Link>
+      </div>
+
       <section style={{ marginTop: 40 }}>
         <h2>The economy types</h2>
         <p className="muted">
           Plain threshold rules on World Bank data, so every label shows its reason on the country page. Values older than 2018 are shown but never used to classify.
         </p>
-        <div className="cards" style={{ marginTop: 16 }}>
+        <div className="rows">
           {ARCHETYPE_IDS.map((id) => (
-            <div className="card" key={id}>
-              <ArchTag id={id} to={`/problems?archetype=${id}`} />
-              <p>{ARCHETYPES[id].short}</p>
-              <p className="small">
+            <div className="row-item" key={id}>
+              <div>
+                <h3>
+                  <i className="dot" style={{ background: archColor(id), marginRight: 9 }} />
+                  {ARCHETYPES[id].name}
+                </h3>
+                <p>{ARCHETYPES[id].short}</p>
+              </div>
+              <p>
                 <b>Building here tends to mean:</b> {ARCHETYPES[id].builds}
               </p>
+              <div className="meta">
+                <span>{counts[id]} economies</span>
+                {id !== "mixed" && <Link to={`/problems?archetype=${id}`}>problems →</Link>}
+              </div>
             </div>
           ))}
         </div>

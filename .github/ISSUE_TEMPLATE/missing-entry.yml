@@ -1,0 +1,35 @@
+name: Missing organisation or failed attempt
+description: Someone already working on a problem, or a documented attempt that stopped, is missing from a card.
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Problem card
+      description: The problem page this belongs on.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's missing
+      options:
+        - An organisation already working on it
+        - An attempt that shut down or failed
+        - Someone who would pay for a solution
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Name, what they do or did, and (for a failure) what stopped it.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link that documents it.
+    validations:
+      required: true

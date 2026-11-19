@@ -9,6 +9,15 @@ export function people(n: number): string {
   return Math.round(n).toString();
 }
 
+/** A sourced count, written the way reports state it ("1.16 million"), without
+ *  rounding away any digit the value carries. */
+export function exactCount(n: number): string {
+  for (const [size, word] of [[1e9, "billion"], [1e6, "million"]] as const) {
+    if (n >= size) return `${Number((n / size).toFixed(6))} ${word}`;
+  }
+  return n.toLocaleString("en-US");
+}
+
 export const dollars = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 export const isStale = (o: Obs | undefined) => !!o && o[1] < STALE_BEFORE;

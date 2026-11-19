@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import { ArchTag, ProblemTile } from "../components/bits";
+import { NotFound } from "../components/NotFound";
+import { reportUrl } from "../site";
+import { ArchTag, ProblemRow } from "../components/bits";
 import { ARCHETYPES } from "../engine/archetype";
 import { trajectory } from "../engine/trajectory";
 import { rank } from "../engine/fit";
@@ -26,16 +28,7 @@ const STATS: { key: MetricKey; label: string; fmt: (n: number) => string }[] = [
 export function CountryPage() {
   const { iso = "" } = useParams();
   const c = BY_ISO.get(iso.toUpperCase());
-  if (!c) {
-    return (
-      <div className="wrap">
-        <h1>No data for this place</h1>
-        <p>
-          The World Bank doesn't publish a profile for it. <Link to="/atlas">Back to the atlas</Link>
-        </p>
-      </div>
-    );
-  }
+  if (!c) return <NotFound what="country profile" />;
   const k = CLASS.get(c.iso3)!;
   const signals = trajectory(c);
   const m = c.metrics;
@@ -76,9 +69,15 @@ export function CountryPage() {
           <>
             <div className="shape" role="img" aria-label={shape.map((s) => `${s.label} ${pct(s.v)}`).join(", ")}>
               {shape.map((s) => (
-                <div key={s.label} style={{ width: `${(s.v / shapeSum) * 100}%`, background: s.color }} title={`${s.label} ${pct(s.v)}`}>
-                  {s.v / shapeSum > 0.12 ? `${s.label} ${pct(s.v)}` : ""}
-                </div>
+                <div key={s.label} style={{ width: `${(s.v / shapeSum) * 100}%`, background: s.color }} />
+              ))}
+            </div>
+            <div className="legend" aria-hidden>
+              {shape.map((s) => (
+                <span key={s.label}>
+                  <i className="dot" style={{ background: s.color }} />
+                  {s.label} {pct(s.v)}
+                </span>
               ))}
             </div>
             <p className="small muted" style={{ marginTop: 8 }}>
@@ -123,7 +122,7 @@ export function CountryPage() {
       </section>
 
       <section className="grid-2">
-        <div className="panel">
+        <div>
           <h2>Where it's heading</h2>
           {signals.length ? (
             signals.map((s) => (
@@ -145,7 +144,7 @@ export function CountryPage() {
             </a>
           </p>
         </div>
-        <div className="panel">
+        <div>
           <h2>What people here care about</h2>
           <p className="muted">
             Not sourced yet. The plan is published survey data (World Values Survey, Ipsos "What Worries the World"), which covers fewer than a third of countries. We'd
@@ -160,12 +159,16 @@ export function CountryPage() {
           {ranked.length} cards match {c.name} or its economy type, ranked with even lens weights.{" "}
           <Link to={`/fit?c=${c.iso3}`}>Rank them for you →</Link>
         </p>
-        <div className="cards" style={{ marginTop: 16 }}>
+        <div className="rows" style={{ marginTop: 16 }}>
           {ranked.map((r) => (
-            <ProblemTile key={r.card.id} card={r.card} />
+            <ProblemRow key={r.card.id} card={r.card} />
           ))}
         </div>
       </section>
+      <p className="report">
+        Spotted a wrong figure? <a href={reportUrl(`/country/${c.iso3}`, c.name)}>Report it on GitHub</a>. Figures come straight from the World Bank, so a mistake here may be
+        theirs or ours; either way we'll check.
+      </p>
     </div>
   );
 }

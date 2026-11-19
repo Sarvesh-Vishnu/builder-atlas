@@ -1,12 +1,12 @@
-import { parse } from "yaml";
-import { ProblemCard } from "./schema";
+import type { ProblemCard } from "./schema";
 
-const files = import.meta.glob("../../content/problems/*.yaml", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+// Turned into JSON at build time (vite.config.ts); validated against the
+// schema by src/content/content.test.ts before any deploy.
+const files = import.meta.glob("../../content/problems/*.yaml", { import: "default", eager: true }) as Record<string, ProblemCard>;
 
-// Cards are validated in CI; parsing again here means a bad card never renders.
+// The schema's defaults for optional lists, applied here since nothing parses at runtime.
 export const PROBLEMS: ProblemCard[] = Object.values(files)
-  .map((raw) => ProblemCard.safeParse(parse(raw)))
-  .flatMap((r) => (r.success ? [r.data] : []))
+  .map((c) => ({ ...c, countries: c.countries ?? [], supply: c.supply ?? [], graveyard: c.graveyard ?? [] }))
   .sort((a, b) => a.title.localeCompare(b.title));
 
 export const PROBLEM_BY_ID = new Map(PROBLEMS.map((p) => [p.id, p]));

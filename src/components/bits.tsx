@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import type { ArchetypeId, ProblemCard } from "../content/schema";
 import { ARCHETYPES } from "../engine/archetype";
@@ -34,36 +35,33 @@ export function LensBar({ card }: { card: ProblemCard }) {
   return (
     <div className="lensbar">
       {(["profit", "meaning", "purpose"] as const).map((l) => (
-        <div key={l}>
-          {l} <Pips n={card.lenses[l].score} />
-        </div>
+        <Fragment key={l}>
+          <span>{l}</span>
+          <Pips n={card.lenses[l].score} />
+        </Fragment>
       ))}
     </div>
   );
 }
 
-export function ProblemTile({ card }: { card: ProblemCard }) {
+export function ProblemRow({ card }: { card: ProblemCard }) {
   return (
-    <Link className="card" to={`/problems/${card.id}`}>
-      <h3>{card.title}</h3>
-      <p>{card.oneLine}</p>
-      <div className="chips">
-        {card.archetypes.map((a) => (
-          <ArchTag key={a} id={a} />
-        ))}
+    <Link className="row-item" to={`/problems/${card.id}`}>
+      <div>
+        <h3>{card.title}</h3>
+        <div className="chips">
+          {card.archetypes.map((a) => (
+            <ArchTag key={a} id={a} />
+          ))}
+        </div>
       </div>
-      <LensBar card={card} />
-      <span className="small muted">
-        {card.crowding.level} · first value in {card.timeToFirstValue} · {card.capital} capital
-      </span>
+      <p>{card.oneLine}</p>
+      <div className="meta">
+        <LensBar card={card} />
+        <span>
+          {card.crowding.level} · {card.timeToFirstValue} · {card.capital} capital
+        </span>
+      </div>
     </Link>
-  );
-}
-
-export function Chip<T extends string>({ value, on, onToggle, children }: { value: T; on: boolean; onToggle: (v: T) => void; children: React.ReactNode }) {
-  return (
-    <button type="button" className="chip" aria-pressed={on} onClick={() => onToggle(value)}>
-      {children}
-    </button>
   );
 }

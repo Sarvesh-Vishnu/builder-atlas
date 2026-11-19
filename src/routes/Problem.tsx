@@ -1,9 +1,11 @@
 import { Link, useParams } from "react-router-dom";
+import { NotFound } from "../components/NotFound";
+import { reportUrl } from "../site";
 import { ArchTag, Pips } from "../components/bits";
 import { PROBLEM_BY_ID } from "../content/load";
 import { BY_ISO } from "../data/countries";
 import type { ProblemCard } from "../content/schema";
-import { people } from "../format";
+import { exactCount } from "../format";
 
 function Src({ s }: { s: ProblemCard["evidence"][number]["source"] }) {
   return (
@@ -19,14 +21,7 @@ function Src({ s }: { s: ProblemCard["evidence"][number]["source"] }) {
 export function ProblemPage() {
   const { id = "" } = useParams();
   const p = PROBLEM_BY_ID.get(id);
-  if (!p) {
-    return (
-      <div className="wrap">
-        <h1>No such problem card</h1>
-        <Link to="/problems">All problems</Link>
-      </div>
-    );
-  }
+  if (!p) return <NotFound what="problem card" />;
   return (
     <div className="wrap">
       <div className="eyebrow">
@@ -46,17 +41,17 @@ export function ProblemPage() {
       </div>
 
       <section className="grid-2">
-        <div className="panel">
+        <div>
           <h2>Who</h2>
           <p>{p.who.text}</p>
           {p.who.population && (
             <p>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "1.8rem" }}>{people(p.who.population.value)}</span> {p.who.population.label}
+              <span className="figure-num">{exactCount(p.who.population.value)}</span> {p.who.population.label}
               <Src s={p.who.population.source} />
             </p>
           )}
         </div>
-        <div className="panel">
+        <div>
           <h2>The lenses</h2>
           <dl className="kv">
             {(["profit", "meaning", "purpose"] as const).map((l) => (
@@ -142,7 +137,7 @@ export function ProblemPage() {
       </section>
 
       <section className="grid-2">
-        <div className="panel">
+        <div>
           <h2>What a small team could build</h2>
           <ul className="plain">
             {p.buildAngles.map((a) => (
@@ -158,7 +153,7 @@ export function ProblemPage() {
             <dd>{p.capital}</dd>
           </dl>
         </div>
-        <div className="panel">
+        <div>
           <h2>Your first ten conversations</h2>
           <p className="muted small">Before you write code, find the people. Places to start:</p>
           <ul className="plain">
@@ -168,6 +163,9 @@ export function ProblemPage() {
           </ul>
         </div>
       </section>
+      <p className="report">
+        Spotted a wrong figure, a missing organisation or an undocumented failure? <a href={reportUrl(`/problems/${p.id}`, p.title)}>Report it on GitHub</a>.
+      </p>
     </div>
   );
 }

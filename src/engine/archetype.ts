@@ -68,6 +68,8 @@ export const ARCHETYPES: Record<ArchetypeId, ArchetypeInfo> = {
 interface Rule {
   id: Exclude<ArchetypeId, "mixed">;
   threshold: number;
+  /** What the rule measures, in words, for the method page. */
+  measure: string;
   read: (c: Country) => { value: number; label: string; year: number } | undefined;
   unit: string;
 }
@@ -78,12 +80,13 @@ const obs = (o: Obs | undefined, label: string) => {
 };
 
 export const RULES: Rule[] = [
-  { id: "agrarian", threshold: 40, unit: "% of jobs", read: (c) => obs(c.metrics.agriEmp, "employment in agriculture") },
-  { id: "manufacturing", threshold: 18, unit: "% of GDP", read: (c) => obs(c.metrics.manufShare, "manufacturing value added") },
-  { id: "services", threshold: 60, unit: "% of GDP", read: (c) => obs(c.metrics.servicesShare, "services value added") },
+  { id: "agrarian", threshold: 40, measure: "Employment in agriculture", unit: "% of jobs", read: (c) => obs(c.metrics.agriEmp, "employment in agriculture") },
+  { id: "manufacturing", threshold: 18, measure: "Manufacturing value added", unit: "% of GDP", read: (c) => obs(c.metrics.manufShare, "manufacturing value added") },
+  { id: "services", threshold: 60, measure: "Services value added", unit: "% of GDP", read: (c) => obs(c.metrics.servicesShare, "services value added") },
   {
     id: "tourism",
     threshold: 25,
+    measure: "International tourism receipts (the 2019 figure when the latest is from 2020–21)",
     unit: "% of exports",
     // 2020–21 tourism figures were emptied by the pandemic; fall back to 2019.
     read: (c) => {
@@ -92,11 +95,12 @@ export const RULES: Rule[] = [
       return obs(c.metrics.tourismShare2019, "tourism receipts (2019, pre-pandemic)") ?? obs(latest, "tourism receipts");
     },
   },
-  { id: "resource", threshold: 12, unit: "% of GDP", read: (c) => obs(c.metrics.resourceRents, "natural resource rents") },
-  { id: "remittance", threshold: 12, unit: "% of GDP", read: (c) => obs(c.metrics.remittances, "remittances received") },
+  { id: "resource", threshold: 12, measure: "Natural resource rents", unit: "% of GDP", read: (c) => obs(c.metrics.resourceRents, "natural resource rents") },
+  { id: "remittance", threshold: 12, measure: "Personal remittances received", unit: "% of GDP", read: (c) => obs(c.metrics.remittances, "remittances received") },
   {
     id: "aging",
     threshold: 17,
+    measure: "People aged 65 and over, in high-income countries only",
     unit: "% of population",
     read: (c) => (c.incomeGroup === "High income" ? obs(c.metrics.over65, "people aged 65+") : undefined),
   },

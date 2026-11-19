@@ -1,0 +1,23 @@
+name: Suggest a problem
+description: A problem worth a builder's attention that the atlas doesn't cover yet.
+labels: [new-problem]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: The problem, in a sentence
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who has it, and where
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to reports or data that state how many people it affects. Cards are only published with sourced figures.
+    validations:
+      required: true

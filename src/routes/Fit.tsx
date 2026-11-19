@@ -52,7 +52,7 @@ export function Fit() {
       </p>
 
       <div className="fit" style={{ marginTop: 28 }}>
-        <form className="panel" onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="field">
             <span className="label">What you're optimising for</span>
             {(

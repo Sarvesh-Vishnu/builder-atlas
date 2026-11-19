@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { ProblemTile, archColor } from "../components/bits";
+import { ProblemRow, archColor } from "../components/bits";
 import { ARCHETYPE_IDS, BLOCKERS, SKILLS } from "../content/schema";
 import { ARCHETYPES } from "../engine/archetype";
 import { PROBLEMS } from "../content/load";
@@ -75,10 +75,13 @@ export function Problems() {
         </div>
       </div>
 
+      <h2 className="sr">
+        {list.length} {list.length === 1 ? "card" : "cards"}
+      </h2>
       {list.length ? (
-        <div className="cards">
+        <div className="rows">
           {list.map((p) => (
-            <ProblemTile key={p.id} card={p} />
+            <ProblemRow key={p.id} card={p} />
           ))}
         </div>
       ) : (

@@ -30,8 +30,12 @@ export interface FitResult {
   reasons: string[];
 }
 
-const W = { lens: 0.5, skills: 0.25, access: 0.25 };
-const NEUTRAL = 0.5;
+/** Score weights and adjustments; the method page renders these. */
+export const W = { lens: 0.5, skills: 0.25, access: 0.25 };
+export const NEUTRAL = 0.5;
+export const ACCESS = { near: 1, kin: 0.7, far: 0.2 };
+export const PENALTY = { runwayOneStep: 0.8, runwayTwoSteps: 0.6, capital: 0.75 };
+export const CROWDING = { sparse: 3, crowded: -5 };
 const RUNWAY_RANK: Record<Runway, number> = { weekends: 0, months: 1, years: 2 };
 const TTV_RANK = { weeks: 0, months: 1, years: 2 } as const;
 const CAPITAL_RANK: Record<Capital, number> = { low: 0, medium: 1, high: 2 };
@@ -64,28 +68,28 @@ export function scoreCard(card: ProblemCard, b: Builder): FitResult {
     const near = card.countries.filter((c) => b.countries.includes(c));
     const kin = card.archetypes.filter((a) => b.archetypes.includes(a));
     if (near.length) {
-      access = 1;
+      access = ACCESS.near;
       reasons.push(`acute in ${near.join(", ")}, where you have reach`);
     } else if (kin.length) {
-      access = 0.7;
+      access = ACCESS.kin;
       reasons.push(`common in ${kin.join("/")} economies, which you know`);
     } else {
-      access = 0.2;
+      access = ACCESS.far;
       reasons.push("far from the places you listed — you'd need a local partner");
     }
   }
 
   let fitPenalty = 1;
   if (TTV_RANK[card.timeToFirstValue] > RUNWAY_RANK[b.runway]) {
-    fitPenalty *= TTV_RANK[card.timeToFirstValue] - RUNWAY_RANK[b.runway] === 2 ? 0.6 : 0.8;
+    fitPenalty *= TTV_RANK[card.timeToFirstValue] - RUNWAY_RANK[b.runway] === 2 ? PENALTY.runwayTwoSteps : PENALTY.runwayOneStep;
     reasons.push(`first value takes ${card.timeToFirstValue}; you have ${b.runway}`);
   }
   if (CAPITAL_RANK[card.capital] > CAPITAL_RANK[b.capital]) {
-    fitPenalty *= 0.75;
+    fitPenalty *= PENALTY.capital;
     reasons.push(`needs ${card.capital} capital; you have ${b.capital}`);
   }
 
-  const crowding = card.crowding.level === "sparse" ? 3 : card.crowding.level === "crowded" ? -5 : 0;
+  const crowding = card.crowding.level === "sparse" ? CROWDING.sparse : card.crowding.level === "crowded" ? CROWDING.crowded : 0;
   if (crowding) reasons.push(card.crowding.level === "sparse" ? "few others are building here" : "crowded — find the corner others miss");
 
   const base = (W.lens * lens + W.skills * skills + W.access * access) * 100;

@@ -1,36 +1,45 @@
-# Builder Atlas (working name)
+# Builder Atlas
 
-Who are you actually building for? A sourced atlas of the world's people, economies and unmet needs, for individual builders.
+**Who are you actually building for?** A sourced atlas of the world's people, economies and unmet needs, for anyone deciding what to build.
 
-What it does that asking a chatbot doesn't:
-- **Every number has a source and a date.** Missing data shows as missing.
-- **Need next to supply.** Each problem lists who is already working on it.
-- **A graveyard.** Past attempts and the blocker that stopped them.
-- **Who suffers ≠ who pays.** Each problem names its likely payers.
-- **Economy shape matters.** Countries are sorted by how people earn (agrarian, manufacturing, services, tourism, resource, remittance, aging high-income, mixed) and where they're heading.
-- **Transparent fit.** A deterministic ranking with every reason shown. No LLM in the core path.
+Live: https://sarvesh-vishnu.github.io/builder-atlas/
 
-## Run
+- **The atlas.** 217 economies sorted by how their people earn a living (farming, manufacturing, services, tourism, resources, remittances, aging high-income, mixed), each with the rule that put it there.
+- **The people.** The world's population regrouped by economy type, income, age and connection.
+- **Country pages.** The shape of the economy, the people, where it's heading to 2050, and the problems that apply.
+- **16 problem cards.** Who has the problem, sourced evidence, who's already working on it, who might pay, what has been tried and failed, and where to find the first people to talk to.
+- **Find your fit.** A transparent ranking of the problems for your skills, reach, runway and what you're optimising for. Every point of the score shows its reason. No AI model is involved.
+
+How the numbers work, and what isn't covered, is on the site's [How this works](https://sarvesh-vishnu.github.io/builder-atlas/method/) page.
+
+## Found a mistake?
+
+Every country and problem page has a "Report it on GitHub" link that opens a prefilled form. You can also [open an issue](https://github.com/Sarvesh-Vishnu/builder-atlas/issues/new/choose) to correct a figure, add an organisation or a documented failure, or suggest a problem. A correction needs a link to the page that states the right figure.
+
+## Run it
 
 ```bash
 npm install
-npm run dev          # http://localhost:5189
-npm test             # engines + content gates
-npm run validate     # problem cards against the schema
-npm run check:links  # fetch every source URL in the cards
-npm run fetch:data   # refresh the World Bank snapshot + map
+npm run dev          # http://localhost:5189/builder-atlas/
+npm test             # engines, card schema, every pre-rendered page
+npm run build        # typecheck, build, pre-render all routes into dist/
+npm run check:links  # fetch every source URL in the cards (manual; some sites block scripts)
+npm run fetch:data   # refresh the World Bank snapshot and the map
 ```
 
-## Layout
+Every push to `main` runs the tests and, if they pass, deploys to GitHub Pages.
 
-- `scripts/fetch-countries.mjs` → `src/data/countries.json`: World Bank WDI + population projections, values stored as `[value, year]`; nothing estimated.
-- `scripts/fetch-map.mjs` → `src/data/world-110m.json`: Natural Earth 110m with ISO-3 codes.
-- `src/engine/archetype.ts`: threshold rules → economy type, with the reason. Values older than 2018 never classify.
-- `src/engine/trajectory.ts`: 20-year trends + 2050 projections as named signals.
-- `src/engine/fit.ts`: builder × problem score (50% lens, 25% skills, 25% reach; runway/capital penalties; crowding nudge).
-- `content/problems/*.yaml`: problem cards. Format and rules in `content/FORMAT.md`; schema in `src/content/schema.ts`.
+## How it's put together
 
-## Not yet
+- `scripts/fetch-countries.mjs` → `src/data/countries.json`: World Bank indicators and population projections, stored as `[value, year]`. Nothing is estimated.
+- `src/engine/`: the economy-type rules, trajectory signals and fit score, all pure functions with tests.
+- `content/problems/*.yaml`: the problem cards. Format and rules in `content/FORMAT.md`; the schema in `src/content/schema.ts` rejects any figure without a source and date.
+- `scripts/prerender.mjs`: renders every route to static HTML, so the site reads with JavaScript off.
+- `design.md`: the design contract.
 
-- "What people care about" per country (World Values Survey / Ipsos), left blank rather than guessed.
-- Phase 2: builder claims, progress logs, live crowding, community graveyard entries (needs a backend).
+## Data and credits
+
+- Country data: [World Bank Open Data](https://data.worldbank.org/), CC BY 4.0.
+- Map: [Natural Earth](https://www.naturalearthdata.com/) via [world-atlas](https://github.com/topojson/world-atlas), public domain.
+- Problem cards cite their own sources, linked beside every figure.
+- Fonts: Instrument Sans and JetBrains Mono, SIL Open Font License, self-hosted.

@@ -1,0 +1,31 @@
+name: Wrong figure
+description: A number, date or source on the site is wrong or out of date.
+labels: [correction]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page the figure is on (filled in if you came from a "Report it" link).
+    validations:
+      required: true
+  - type: textarea
+    id: figure
+    attributes:
+      label: What the site says
+      description: Quote the sentence or figure.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to the page that states the correct figure.
+    validations:
+      required: true

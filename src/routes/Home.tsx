@@ -57,21 +57,23 @@ export function Home() {
 
       <section>
         <h2>What this gives you that a chat window doesn't</h2>
-        <div className="stances">
+        <ol className="stances">
           {STANCES.map((s, i) => (
-            <div className="stance" key={s.t}>
-              <div className="n">0{i + 1}</div>
-              <h3>{s.t}</h3>
-              <p>{s.p}</p>
-            </div>
+            <li key={s.t}>
+              <span className="n">0{i + 1}</span>
+              <div>
+                <h3>{s.t}</h3>
+                <p>{s.p}</p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       <section>
         <h2>Profit, meaning, purpose</h2>
         <p className="lede">Not three lists. Three ways of ranking the same problems. Where they overlap is usually where a third party will pay for people who can't.</p>
-        <div className="lenses-explain" style={{ marginTop: 20 }}>
+        <div className="lenses-explain">
           <div>
             <h3>Profit</h3>
             <p className="muted">Someone will pay, at a margin that can keep a team alive.</p>
@@ -89,16 +91,16 @@ export function Home() {
 
       <section>
         <h2>Start anywhere</h2>
-        <div className="grid-3">
-          <Link className="card" to="/atlas">
+        <div className="entry">
+          <Link to="/atlas">
             <h3>The atlas</h3>
             <p>Every economy by how its people earn, how old they are, and where it's heading.</p>
           </Link>
-          <Link className="card" to="/problems">
+          <Link to="/problems">
             <h3>{PROBLEMS.length} problems</h3>
             <p>Sourced cards: who, how many, who's on it, who pays, what failed.</p>
           </Link>
-          <Link className="card" to="/people">
+          <Link to="/people">
             <h3>The people</h3>
             <p>The world's population regrouped by economy, income, age and connection.</p>
           </Link>
