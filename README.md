@@ -43,3 +43,10 @@ Every push to `main` runs the tests and, if they pass, deploys to GitHub Pages.
 - Map: [Natural Earth](https://www.naturalearthdata.com/) via [world-atlas](https://github.com/topojson/world-atlas), public domain.
 - Problem cards cite their own sources, linked beside every figure.
 - Fonts: Instrument Sans and JetBrains Mono, SIL Open Font License, self-hosted.
+
+## Licence
+
+- Code: [MIT](LICENSE).
+- Written content (problem cards, economy-type descriptions, site text): [CC BY 4.0](LICENSE-CONTENT.md). Reuse it with credit to Builder Atlas.
+- Figures quoted on the cards belong to their linked publishers; country data is the World Bank's (CC BY 4.0).
+

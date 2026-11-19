@@ -48,7 +48,8 @@ export function Method() {
           </table>
         </div>
         <p className="small muted" style={{ marginTop: 12 }}>
-          World Bank data is licensed CC BY 4.0. Map shapes: Natural Earth (public domain) via world-atlas.
+          World Bank data is licensed CC BY 4.0. Map shapes: Natural Earth (public domain) via world-atlas. This site's code is MIT licensed and its own
+          writing (the problem cards and page text) is CC BY 4.0: reuse it with credit. Figures quoted on the cards belong to their linked publishers.
         </p>
       </section>
 
